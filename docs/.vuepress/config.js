@@ -47,7 +47,6 @@ module.exports = {
 
       {
         text: '🥈 前端面试',
-        link: '/view/',
         items: [
           { text: '📘 《面试题》', link: '/pages/d136a9/' },
           { text: '📘 《简历模板》', link: '/pages/c5cd3d/' },
@@ -57,7 +56,6 @@ module.exports = {
 
       {
         text: '🔨 实用工具',
-        link: '/tool/',
         items: [
           { text: '博客搭建', link: '/pages/28a21a/' },
           { text: '实用网站', link: '/pages/beb6c0bd8a66cea6/' },
@@ -73,7 +71,6 @@ module.exports = {
 
       {
         text: '更多',
-        link: '/more/',
         items: [
           { text: '如何学习', link: '/pages/a6c062/' },
           { text: '友情链接', link: '/friends/' },
