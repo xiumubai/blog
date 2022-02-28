@@ -27,8 +27,8 @@ module.exports = {
         font-size: 20px;
         font-weight: bold;
         margin: 0 0 8px 0;
-      ">微信</p>
+      ">公众号</p>
       <img src="https://xiumubai.oss-cn-beijing.aliyuncs.com/me/qrcode_for_gh_28dce69f92ec_1280.jpg"  style="width:100%;" />
-      <p>关注加博主微信，回复[<b>简历</b>]，可获取简历模板</p>
+      <p>关注微信公众号添加加博主微信，回复[<b>简历</b>]，可获取简历模板</p>
     </div>`,
 }

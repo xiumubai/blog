@@ -226,9 +226,9 @@ module.exports = {
           // clientID: 'a6e1355287947096b88b',
           // clientSecret: 'f0e77d070fabfcd5af95bebb82b2d574d7248d71',
           // repo: 'blog-gitalk-comment', // GitHub 仓库
-          clientID: '02fc1e0643ea8f0cf242',
-          clientSecret: '2d16cf0257e690951097f236ffff604738583da6',
-          repo: 'vuepress-theme-vdoing',
+          clientID: '398c326ee9d28b524fee',
+          clientSecret: '2ca69d63af67a0ffec63df592e8752f6e63eaa9e',
+          repo: 'blog',
           owner: 'xiumubai', // GitHub仓库所有者
           admin: ['xiumubai'], // 对仓库有写权限的人
           // distractionFreeMode: true,
