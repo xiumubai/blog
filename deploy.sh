@@ -14,17 +14,17 @@ echo 'https://xiumubai.github.io' > CNAME
 
 if [ -z "$GITHUB_TOKEN" ]; then
   msg='deploy'
-  githubUrl=git@github.com:xiumubai/xiumubai.github.io.git
+  githubUrl=git@github.com:xiumubai/blog.git
 else
   msg='来自github actions的自动部署'
-  githubUrl=https://xiumubai:${GITHUB_TOKEN}@github.com/xiumubai/xiumubai.github.io.git
+  githubUrl=https://xiumubai:${GITHUB_TOKEN}@github.com/xiumubai/blog.git
   git config --global user.name "xiumubai"
   git config --global user.email "1547702880@qq.com"
 fi
 git init
 git add -A
 git commit -m "${msg}"
-git push -f $githubUrl master # 推送到github gh-pages分支
+git push -f $githubUrl master:gh-pages # 推送到github gh-pages分支
 
 cd -
 rm -rf docs/.vuepress/dist
