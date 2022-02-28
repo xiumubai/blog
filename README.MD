@@ -22,4 +22,8 @@ npm install # or yarn install
 
 # develop
 npm run dev # or yarn dev
+
+# deploy
+git push # git actions
+
 ```
