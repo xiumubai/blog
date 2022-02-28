@@ -57,10 +57,10 @@ module.exports = {
       {
         text: '🔨 实用工具',
         items: [
-          { text: '博客搭建', link: '/pages/28a21a/' },
+          { text: '博客搭建', link: '/pages/41f87d890d0a02af/' },
           { text: '实用网站', link: '/pages/beb6c0bd8a66cea6/' },
           { text: '实用轮子', link: '/pages/47cf96wrewtwt565/' },
-          { text: 'GitHub', link: '/pages/85e56f/' },
+          { text: 'GitHub', link: '/pages/8292d8/' },
         ],
       },
 
