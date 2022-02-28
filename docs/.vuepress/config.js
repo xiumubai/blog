@@ -50,7 +50,7 @@ module.exports = {
         items: [
           { text: '📘 《面试题》', link: '/pages/d136a9/' },
           { text: '📘 《简历模板》', link: '/pages/c5cd3d/' },
-          { text: '📘 《Hr问题系列》', link: '/pages/b1998f/' },
+          { text: '📘 《Hr问题集锦》', link: '/pages/aea6571b7a8bae86/' },
         ],
       },
 
@@ -72,7 +72,7 @@ module.exports = {
       {
         text: '更多',
         items: [
-          { text: '如何学习', link: '/pages/a6c062/' },
+          { text: '杂货铺', link: '/pages/f2a556/' },
           { text: '友情链接', link: '/friends/' },
         ],
       },
