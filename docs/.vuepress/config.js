@@ -3,6 +3,7 @@ const htmlModules = require('./config/htmlModules.js');
 module.exports = {
   theme: 'vdoing', // 使用npm包主题
   title: '朽木学社',
+  base: '/blog/',
   description:
     'web前端技术博客,专注web前端学习与总结。JavaScript,js,ES6,TypeScript,vue,React,python,css3,html5,Node,git,github等技术文章。',
   // 主题配置
