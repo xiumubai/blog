@@ -57,9 +57,8 @@ module.exports = {
       {
         text: '🔨 实用工具',
         items: [
+          { text: '实用轮子', link: '/pages/1c7cc5/' },
           { text: '博客搭建', link: '/pages/41f87d890d0a02af/' },
-          { text: '实用网站', link: '/pages/beb6c0bd8a66cea6/' },
-          { text: '实用轮子', link: '/pages/47cf96wrewtwt565/' },
           { text: 'GitHub', link: '/pages/8292d8/' },
         ],
       },
@@ -72,6 +71,7 @@ module.exports = {
       {
         text: '更多',
         items: [
+          { text: '实用网站', link: '/pages/beb6c0bd8a66cea6/' },
           { text: '杂货铺', link: '/pages/f2a556/' },
           { text: '友情链接', link: '/friends/' },
         ],
