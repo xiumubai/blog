@@ -87,25 +87,25 @@ postList: detailed
 
 ```yaml
 - name: 朽木学社
-  desc: 朽木不雕难成才，知耻后勇凌云志。
+  desc: 前端进阶路线总结和 大厂面试题
   avatar: /img/vlogo.png # 可选
-  link: https://xiumubai.github.io/ # 可选
+  link: https://blog.xiumubai.com # 可选
   bgColor: '#CBEAFA' # 可选，默认var(--bodyBg)。颜色值有#号时请添加单引号
   textColor: '#6854A1' # 可选，默认var(--textColor)
 
-- name: 朽木学社2
-  desc: 朽木不雕难成才，知耻后勇凌云志2。
-  avatar: /img/vlogo.png # 可选
-  link: https://xiumubai.github.io/ # 可选
-  bgColor: '#CBEAFA' # 可选，默认var(--bodyBg)。颜色值有#号时请添加单引号
-  textColor: '#6854A1' # 可选，默认var(--textColor)
+- name: 大圣
+  desc: 大圣前端学习路线图，带你成为前端大佬
+  avatar: https://shengxinjing.cn/logo.png # 可选
+  link: https://shengxinjing.cn/ # 可选
+  bgColor: '#B9D59C'
+  textColor: '#3B551F'
 
-- name: 朽木学社3
-  desc: 朽木不雕难成才，知耻后勇凌云志3。
-  avatar: /img/vlogo.png # 可选
-  link: https://xiumubai.github.io/ # 可选
-  bgColor: '#CBEAFA' # 可选，默认var(--bodyBg)。颜色值有#号时请添加单引号
-  textColor: '#6854A1' # 可选，默认var(--textColor)
+- name: 阿崔cxr
+  desc: Vue3 源码实战课 - 构建你自己的 Vue3
+  avatar: https://xiumubai.oss-cn-beijing.aliyuncs.com/blog/3b522b83ea507d2b3b1225d1ca8d0b16fa02d3de.jpeg # 可选
+  link: https://space.bilibili.com/175301983/ # 可选
+  bgColor: '#FFE5B4'
+  textColor: '#A05F2C'
 ```
 
 :::
