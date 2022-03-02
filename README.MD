@@ -1,5 +1,5 @@
 <h2 align="center">blog</h2>
-- [效果：xiumubai](https://xiumubai.github.io/)
+[预览地址:朽木学社](http://blog.xiumubai.com/)
 
 ## 介绍
 
