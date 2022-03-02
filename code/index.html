@@ -9,32 +9,31 @@
 <body>
   <script>
 
-    Function.prototype.myBind = function (context, ...args) {
-      // 1: 保存下当前 this（这里的 this 就是我们要改造的的那个函数）
-      const _this = this;
-      // 2: 返回一个函数
-      return function F() {
-        // 3: 因为返回了一个函数，除了直接调用还可以 new F()，所以需要判断分开走
-        // 4: new 的方式
-        if (_this instanceof F) {
-          return new _this(...args, ...arguments);
+var obj = {
+    hi: function(){
+        console.log(this);
+        return ()=>{
+            console.log(this);
         }
-        // 5: 直接调用，这里选择了 apply 的方式实现但是对于参数需要注意以下情况：因为 bind 可以实现类似这样的代码 f.bind(obj, 1)(2)，所以我们需要将两边的参数拼接起来，于是就有了这样的实现 args.concat(…arguments)；
-        return _this.apply(context, args.concat(...arguments));
-      }
+    },
+    sayHi: function(){
+        return function() {
+            console.log(this);
+            return ()=>{
+                console.log(this);
+            }
+        }
+    },
+    say: ()=>{
+        console.log(this);
     }
+}
 
-    const me = {
-      name: 'xiumu',
-      getAge: function(sex) {
-        console.log(`my name is ${this.name}, I am ${sex}`)
-        // my name is xiumu, I am 男
-      }
-    }
+let sayHi = obj.sayHi();
+let fun1 = sayHi(); //输出window
+fun1()
+obj.say();
 
-    const unboundGetAge = me.getAge;
-    const boundGetAge = unboundGetAge.myBind(me, '男');
-    boundGetAge(18)
 
   </script>
 </body>
