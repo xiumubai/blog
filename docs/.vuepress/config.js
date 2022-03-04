@@ -17,7 +17,9 @@ module.exports = {
     docsDir: 'docs', // 编辑的文件夹
     editLinks: true, // 启用编辑
     editLinkText: '编辑',
-
+    markdown: {
+      lineNumbers: true
+    },
     // rightMenuBar: false, // 是否显示右侧文章大纲栏，默认true (屏宽小于1300px下无论如何都不显示)
     // sidebarOpen: false, // 初始状态是否打开左侧边栏，默认true
     // pageButton: false, // 是否显示快捷翻页按钮，默认true
@@ -60,6 +62,7 @@ module.exports = {
           { text: '实用轮子', link: '/pages/1c7cc5/' },
           { text: '博客搭建', link: '/pages/41f87d890d0a02af/' },
           { text: 'GitHub', link: '/pages/8292d8/' },
+          { text: '写文章', link: '/pages/03e105/' }
         ],
       },
 

@@ -9,32 +9,19 @@
 <body>
   <script>
 
-var obj = {
-    hi: function(){
-        console.log(this);
-        return ()=>{
-            console.log(this);
-        }
-    },
-    sayHi: function(){
-        return function() {
-            console.log(this);
-            return ()=>{
-                console.log(this);
-            }
-        }
-    },
-    say: ()=>{
-        console.log(this);
-    }
+function createCounter() {
+  let counter = 0
+  const myFunction = function() {
+    counter = counter + 1
+    return counter
+  }
+  return myFunction
 }
-
-let sayHi = obj.sayHi();
-let fun1 = sayHi(); //输出window
-fun1()
-obj.say();
-
-
+const increment = createCounter()
+const c1 = increment()
+const c2 = increment()
+const c3 = increment()
+console.log('example increment', c1, c2, c3)
   </script>
 </body>
 </html>
