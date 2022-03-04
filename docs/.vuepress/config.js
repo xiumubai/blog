@@ -83,7 +83,6 @@ module.exports = {
       { text: '关于', link: '/about/' },
     ],
 
-    // 是否打开
     // 文章默认的作者信息，可在md文件中单独配置此信息 String | {name: String, link: String}
     author: {
       name: 'xiumubai', // 必需
@@ -225,12 +224,8 @@ module.exports = {
       {
         choosen: 'gitalk',
         options: {
-          // 在github上申请OAuth App https://blog.csdn.net/kobe24lmlps/article/details/80838329
-          // clientID: 'a6e1355287947096b88b',
-          // clientSecret: 'f0e77d070fabfcd5af95bebb82b2d574d7248d71',
-          // repo: 'blog-gitalk-comment', // GitHub 仓库
-          clientID: '398c326ee9d28b524fee',
-          clientSecret: '2ca69d63af67a0ffec63df592e8752f6e63eaa9e',
+          clientID: '030391db46760b6ab439',
+          clientSecret: '78cb76c4459a6151222f6fd245325270263def15',
           repo: 'blog',
           owner: 'xiumubai', // GitHub仓库所有者
           admin: ['xiumubai'], // 对仓库有写权限的人
