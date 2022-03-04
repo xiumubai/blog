@@ -41,7 +41,7 @@ module.exports = {
           { text: '📗 《React 教程》', link: '/pages/5df969/' },
           { text: '📗 《Vue 教程》', link: '/pages/114158caa9e96df0/' },
           { text: '📗 《Webpack 教程》', link: '/webpack/course/' },
-          { text: '📗 《算法与数据结构 教程》', link: '/leetcode/course/' },
+          { text: '📗 《算法与数据结构 教程》', link: '/pages/ed537f/' },
         ],
       },
 
