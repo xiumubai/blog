@@ -224,8 +224,8 @@ module.exports = {
       {
         choosen: 'gitalk',
         options: {
-          clientID: '030391db46760b6ab439',
-          clientSecret: '78cb76c4459a6151222f6fd245325270263def15',
+          clientID: '9aa8b69917efb0b03030',
+          clientSecret: 'a7dce2be127f823de625afb4aa4f26cdc7ea0ed2',
           repo: 'blog',
           owner: 'xiumubai', // GitHub仓库所有者
           admin: ['xiumubai'], // 对仓库有写权限的人
