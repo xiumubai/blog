@@ -9,19 +9,34 @@
 <body>
   <script>
 
-function createCounter() {
-  let counter = 0
-  const myFunction = function() {
-    counter = counter + 1
-    return counter
+let strs = 'Abc2bA';
+
+function isPali(str, l, r) {
+  while(l < r) {
+    if(str[l] !== str[r]) {
+      return false
+    }
+    l ++;
+    r --;
   }
-  return myFunction
-}
-const increment = createCounter()
-const c1 = increment()
-const c2 = increment()
-const c3 = increment()
-console.log('example increment', c1, c2, c3)
+  return true;
+} 
+
+function validPalindrome(str) {
+  let arr = str.toLocaleLowerCase().replace(/[\W_]/ig, '').split('');
+  let l = 0, r = arr.length - 1;
+  while(l < r) {
+    if(arr[l] !== arr[r]) {
+      return isPali(str, l++, r) || isPali(str, l, r--);
+    }
+    l ++;
+    r --;
+  }
+  return true;
+} 
+
+console.log(validPalindrome(strs));
+
   </script>
 </body>
 </html>
