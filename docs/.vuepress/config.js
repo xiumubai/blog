@@ -17,7 +17,9 @@ module.exports = {
     docsDir: 'docs', // 编辑的文件夹
     editLinks: true, // 启用编辑
     editLinkText: '编辑',
-
+    markdown: {
+      lineNumbers: true
+    },
     // rightMenuBar: false, // 是否显示右侧文章大纲栏，默认true (屏宽小于1300px下无论如何都不显示)
     // sidebarOpen: false, // 初始状态是否打开左侧边栏，默认true
     // pageButton: false, // 是否显示快捷翻页按钮，默认true
@@ -41,7 +43,8 @@ module.exports = {
           { text: '📗 《React 教程》', link: '/pages/5df969/' },
           { text: '📗 《Vue 教程》', link: '/pages/114158caa9e96df0/' },
           { text: '📗 《Webpack 教程》', link: '/webpack/course/' },
-          { text: '📗 《算法与数据结构 教程》', link: '/leetcode/course/' },
+          { text: '📗 《设计模式 教程》', link: '/pages/15ee91/' },
+          { text: '📗 《算法与数据结构 教程》', link: '/pages/ed537f/' },
         ],
       },
 
@@ -60,13 +63,14 @@ module.exports = {
           { text: '实用轮子', link: '/pages/1c7cc5/' },
           { text: '博客搭建', link: '/pages/41f87d890d0a02af/' },
           { text: 'GitHub', link: '/pages/8292d8/' },
+          { text: '写文章', link: '/pages/03e105/' }
         ],
       },
 
-      {
-        text: '📚 个人随笔',
-        link: '/pages/e85ea5/',
-      },
+      // {
+      //   text: '📚 个人随笔',
+      //   link: '/pages/e85ea5/',
+      // },
 
       {
         text: '更多',
@@ -80,7 +84,6 @@ module.exports = {
       { text: '关于', link: '/about/' },
     ],
 
-    // 是否打开
     // 文章默认的作者信息，可在md文件中单独配置此信息 String | {name: String, link: String}
     author: {
       name: 'xiumubai', // 必需
@@ -222,12 +225,8 @@ module.exports = {
       {
         choosen: 'gitalk',
         options: {
-          // 在github上申请OAuth App https://blog.csdn.net/kobe24lmlps/article/details/80838329
-          // clientID: 'a6e1355287947096b88b',
-          // clientSecret: 'f0e77d070fabfcd5af95bebb82b2d574d7248d71',
-          // repo: 'blog-gitalk-comment', // GitHub 仓库
-          clientID: '398c326ee9d28b524fee',
-          clientSecret: '2ca69d63af67a0ffec63df592e8752f6e63eaa9e',
+          clientID: '9aa8b69917efb0b03030',
+          clientSecret: 'a7dce2be127f823de625afb4aa4f26cdc7ea0ed2',
           repo: 'blog',
           owner: 'xiumubai', // GitHub仓库所有者
           admin: ['xiumubai'], // 对仓库有写权限的人

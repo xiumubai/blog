@@ -9,31 +9,33 @@
 <body>
   <script>
 
-var obj = {
-    hi: function(){
-        console.log(this);
-        return ()=>{
-            console.log(this);
-        }
-    },
-    sayHi: function(){
-        return function() {
-            console.log(this);
-            return ()=>{
-                console.log(this);
-            }
-        }
-    },
-    say: ()=>{
-        console.log(this);
+let strs = 'Abc2bA';
+
+function isPali(str, l, r) {
+  while(l < r) {
+    if(str[l] !== str[r]) {
+      return false
     }
-}
+    l ++;
+    r --;
+  }
+  return true;
+} 
 
-let sayHi = obj.sayHi();
-let fun1 = sayHi(); //输出window
-fun1()
-obj.say();
+function validPalindrome(str) {
+  let arr = str.toLocaleLowerCase().replace(/[\W_]/ig, '').split('');
+  let l = 0, r = arr.length - 1;
+  while(l < r) {
+    if(arr[l] !== arr[r]) {
+      return isPali(str, l++, r) || isPali(str, l, r--);
+    }
+    l ++;
+    r --;
+  }
+  return true;
+} 
 
+console.log(validPalindrome(strs));
 
   </script>
 </body>
