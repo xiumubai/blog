@@ -18,7 +18,7 @@ module.exports = {
     editLinks: true, // 启用编辑
     editLinkText: '编辑',
     markdown: {
-      lineNumbers: true
+      lineNumbers: true,
     },
     // rightMenuBar: false, // 是否显示右侧文章大纲栏，默认true (屏宽小于1300px下无论如何都不显示)
     // sidebarOpen: false, // 初始状态是否打开左侧边栏，默认true
@@ -49,12 +49,13 @@ module.exports = {
       },
 
       {
-        text: '🥈 前端面试',
-        items: [
-          { text: '📘 《面试题》', link: '/pages/d136a9/' },
-          { text: '📘 《简历模板》', link: '/pages/c5cd3d/' },
-          { text: '📘 《Hr问题集锦》', link: '/pages/aea6571b7a8bae86/' },
-        ],
+        text: '📘 最强面试题',
+        link: '/pages/4a8976/',
+      },
+
+      {
+        text: '📗 文章收录',
+        link: '/pages/4b9d5c/',
       },
 
       {
@@ -62,8 +63,8 @@ module.exports = {
         items: [
           { text: '实用轮子', link: '/pages/1c7cc5/' },
           { text: '博客搭建', link: '/pages/41f87d890d0a02af/' },
-          { text: 'GitHub', link: '/pages/8292d8/' },
-          { text: '写文章', link: '/pages/03e105/' }
+          { text: 'GitHub技巧', link: '/pages/8292d8/' },
+          { text: '写文章技巧', link: '/pages/03e105/' },
         ],
       },
 
