@@ -12,15 +12,15 @@ features: # 可选的
   - title: 前端教程系列
     details: JavaScript、ES6、Vue、React框架等前端技术
     link: /frontend/ # 可选
-    imgUrl: /img/web.png # 可选
+    # imgUrl: /img/web.png # 可选
   - title: 面试题
     details: 面试题、面试模板、hr问题集锦
     link: /pages/d136a9/
-    imgUrl: /img/ui.png
+    # imgUrl: /img/ui.png
   - title: 实用工具
     details: github实用技巧，前端开发工具总结
     link: /pages/41f87d890d0a02af/
-    imgUrl: /img/other.png
+    # imgUrl: /img/other.png
 
 # 文章列表显示方式: detailed 默认，显示详细版文章列表（包括作者、分类、标签、摘要、分页等）| simple => 显示简约版文章列表（仅标题和日期）| none 不显示文章列表
 postList: detailed
