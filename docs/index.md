@@ -15,7 +15,7 @@ features: # 可选的
     # imgUrl: /img/web.png # 可选
   - title: 面试题
     details: 面试题、面试模板、hr问题集锦
-    link: /pages/d136a9/
+    link: /pages/4a8976/
     # imgUrl: /img/ui.png
   - title: 实用工具
     details: github实用技巧，前端开发工具总结
