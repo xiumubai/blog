@@ -10,7 +10,7 @@ actionText: 立刻进入 →
 
 features: # 可选的
   - title: 前端教程系列
-    details: JavaScript、ES6、Vue、React框架等前端技术
+    details: JavaScript、Vue、React框架等前端技术
     link: /frontend/ # 可选
     # imgUrl: /img/web.png # 可选
   - title: 面试题
