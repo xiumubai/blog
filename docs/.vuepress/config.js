@@ -49,7 +49,7 @@ module.exports = {
       },
 
       {
-        text: '📘 最强面试题',
+        text: '📘 前端面试题攻略',
         link: '/pages/4a8976/',
       },
 
@@ -61,10 +61,11 @@ module.exports = {
       {
         text: '🔨 实用工具',
         items: [
-          { text: '实用轮子', link: '/pages/1c7cc5/' },
           { text: '博客搭建', link: '/pages/41f87d890d0a02af/' },
           { text: 'GitHub技巧', link: '/pages/8292d8/' },
+          { text: '常用软件', link: '/pages/61f2f95fd7da14fd/' },
           { text: '写文章技巧', link: '/pages/03e105/' },
+          { text: 'Mac使用技巧', link: '/pages/9ee271/' }
         ],
       },
 
@@ -76,6 +77,7 @@ module.exports = {
       {
         text: '更多',
         items: [
+          { text: '实用轮子', link: '/pages/1c7cc5/' },
           { text: '实用网站', link: '/pages/beb6c0bd8a66cea6/' },
           { text: '杂货铺', link: '/pages/f2a556/' },
           { text: '友情链接', link: '/friends/' },
