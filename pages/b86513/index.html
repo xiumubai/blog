@@ -1,0 +1,1386 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>10 offer收割机之手写代码篇 | 朽木学社</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    <link rel="icon" href="/img/favicon.ico">
+    <script data-ad-client="ca-pub-7828333725993554" async="async" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <meta name="description" content="web前端技术博客,专注web前端学习与总结。JavaScript,js,ES6,TypeScript,vue,React,python,css3,html5,Node,git,github等技术文章。">
+    <meta name="keywords" content="前端博客,个人技术博客,前端,前端开发,前端框架,web前端,前端面试题,技术文档,学习,面试,JavaScript,js,ES6,TypeScript,vue,python,css3,html5,Node,git,github,markdown">
+    <meta name="baidu-site-verification" content="7F55weZDDc">
+    <meta name="theme-color" content="#11a8cd">
+    
+    <link rel="preload" href="/assets/css/0.styles.94e8daa7.css" as="style"><link rel="preload" href="/assets/js/app.fb1f9387.js" as="script"><link rel="preload" href="/assets/js/2.3389238a.js" as="script"><link rel="preload" href="/assets/js/144.1acde388.js" as="script"><link rel="prefetch" href="/assets/js/10.3ee11414.js"><link rel="prefetch" href="/assets/js/100.6630a2d2.js"><link rel="prefetch" href="/assets/js/101.92d97350.js"><link rel="prefetch" href="/assets/js/102.633f7606.js"><link rel="prefetch" href="/assets/js/103.d088091d.js"><link rel="prefetch" href="/assets/js/104.84433564.js"><link rel="prefetch" href="/assets/js/105.3f83d506.js"><link rel="prefetch" href="/assets/js/106.3a28f927.js"><link rel="prefetch" href="/assets/js/107.1ff46145.js"><link rel="prefetch" href="/assets/js/108.884f3482.js"><link rel="prefetch" href="/assets/js/109.d584870e.js"><link rel="prefetch" href="/assets/js/11.a87d6a7c.js"><link rel="prefetch" href="/assets/js/110.ec1e4428.js"><link rel="prefetch" href="/assets/js/111.db024fb8.js"><link rel="prefetch" href="/assets/js/112.1c69b3b7.js"><link rel="prefetch" href="/assets/js/113.775a2bb8.js"><link rel="prefetch" href="/assets/js/114.131b41b0.js"><link rel="prefetch" href="/assets/js/115.efb8e0f2.js"><link rel="prefetch" href="/assets/js/116.baadc61e.js"><link rel="prefetch" href="/assets/js/117.5d19aad3.js"><link rel="prefetch" href="/assets/js/118.e8c4ee34.js"><link rel="prefetch" href="/assets/js/119.032c2543.js"><link rel="prefetch" href="/assets/js/12.dbd893bd.js"><link rel="prefetch" href="/assets/js/120.135db9df.js"><link rel="prefetch" href="/assets/js/121.731fa5d2.js"><link rel="prefetch" href="/assets/js/122.195cb4d8.js"><link rel="prefetch" href="/assets/js/123.17cb5b9f.js"><link rel="prefetch" href="/assets/js/124.82e7c5cd.js"><link rel="prefetch" href="/assets/js/125.ba318516.js"><link rel="prefetch" href="/assets/js/126.3d4464d4.js"><link rel="prefetch" href="/assets/js/127.1593964c.js"><link rel="prefetch" href="/assets/js/128.88bd4f53.js"><link rel="prefetch" href="/assets/js/129.4a9f740e.js"><link rel="prefetch" href="/assets/js/13.3ea75748.js"><link rel="prefetch" href="/assets/js/130.6e38c0f2.js"><link rel="prefetch" href="/assets/js/131.f3d91863.js"><link rel="prefetch" href="/assets/js/132.ef40494c.js"><link rel="prefetch" href="/assets/js/133.d4e86020.js"><link rel="prefetch" href="/assets/js/134.8a760ad1.js"><link rel="prefetch" href="/assets/js/135.809a2abb.js"><link rel="prefetch" href="/assets/js/136.6e7110fb.js"><link rel="prefetch" href="/assets/js/137.0c19aaf4.js"><link rel="prefetch" href="/assets/js/138.3176c5f2.js"><link rel="prefetch" href="/assets/js/139.b4a99568.js"><link rel="prefetch" href="/assets/js/14.8dbb2ccb.js"><link rel="prefetch" href="/assets/js/140.49c3265a.js"><link rel="prefetch" href="/assets/js/141.950622a6.js"><link rel="prefetch" href="/assets/js/142.8ff16601.js"><link rel="prefetch" href="/assets/js/143.bf039239.js"><link rel="prefetch" href="/assets/js/145.39a99056.js"><link rel="prefetch" href="/assets/js/146.9d66fe31.js"><link rel="prefetch" href="/assets/js/147.4f0491e4.js"><link rel="prefetch" href="/assets/js/148.bab68b83.js"><link rel="prefetch" href="/assets/js/149.ed205a73.js"><link rel="prefetch" href="/assets/js/15.8105946d.js"><link rel="prefetch" href="/assets/js/150.c7c8beca.js"><link rel="prefetch" href="/assets/js/151.78553d0a.js"><link rel="prefetch" href="/assets/js/152.439d9c6c.js"><link rel="prefetch" href="/assets/js/153.89cabcc3.js"><link rel="prefetch" href="/assets/js/154.07c3e3ac.js"><link rel="prefetch" href="/assets/js/155.ef8c975f.js"><link rel="prefetch" href="/assets/js/156.d72c2f7b.js"><link rel="prefetch" href="/assets/js/157.7c08f160.js"><link rel="prefetch" href="/assets/js/158.cd620f16.js"><link rel="prefetch" href="/assets/js/159.be60d72c.js"><link rel="prefetch" href="/assets/js/16.b9c4c5da.js"><link rel="prefetch" href="/assets/js/160.19c2641c.js"><link rel="prefetch" href="/assets/js/161.42383c22.js"><link rel="prefetch" href="/assets/js/162.cea95cd7.js"><link rel="prefetch" href="/assets/js/163.61cf2de0.js"><link rel="prefetch" href="/assets/js/164.40ecb02d.js"><link rel="prefetch" href="/assets/js/165.a78fdc8c.js"><link rel="prefetch" href="/assets/js/166.8ca1441b.js"><link rel="prefetch" href="/assets/js/167.c1856c83.js"><link rel="prefetch" href="/assets/js/168.b384731c.js"><link rel="prefetch" href="/assets/js/169.5b402ac3.js"><link rel="prefetch" href="/assets/js/17.fd32166f.js"><link rel="prefetch" href="/assets/js/170.cec307a1.js"><link rel="prefetch" href="/assets/js/171.1a82073a.js"><link rel="prefetch" href="/assets/js/172.c9c4ecc0.js"><link rel="prefetch" href="/assets/js/173.c5c9a96c.js"><link rel="prefetch" href="/assets/js/174.fd781876.js"><link rel="prefetch" href="/assets/js/175.dcd56fa3.js"><link rel="prefetch" href="/assets/js/176.88e0ebf6.js"><link rel="prefetch" href="/assets/js/177.70e1f12d.js"><link rel="prefetch" href="/assets/js/178.b857c0b7.js"><link rel="prefetch" href="/assets/js/179.a3556cc4.js"><link rel="prefetch" href="/assets/js/18.d866561c.js"><link rel="prefetch" href="/assets/js/180.b08eece6.js"><link rel="prefetch" href="/assets/js/181.2e10c3d9.js"><link rel="prefetch" href="/assets/js/182.627ec344.js"><link rel="prefetch" href="/assets/js/183.bf3a8f90.js"><link rel="prefetch" href="/assets/js/184.1d730de4.js"><link rel="prefetch" href="/assets/js/185.05719040.js"><link rel="prefetch" href="/assets/js/186.c432acba.js"><link rel="prefetch" href="/assets/js/187.1ef33293.js"><link rel="prefetch" href="/assets/js/188.d81a6541.js"><link rel="prefetch" href="/assets/js/189.481caf9a.js"><link rel="prefetch" href="/assets/js/19.ab11d590.js"><link rel="prefetch" href="/assets/js/190.04cdcfc9.js"><link rel="prefetch" href="/assets/js/191.4f1b2a09.js"><link rel="prefetch" href="/assets/js/192.85731c0e.js"><link rel="prefetch" href="/assets/js/193.9ed53228.js"><link rel="prefetch" href="/assets/js/194.5f918db0.js"><link rel="prefetch" href="/assets/js/195.6f186d54.js"><link rel="prefetch" href="/assets/js/196.8acfa8c8.js"><link rel="prefetch" href="/assets/js/197.47f61a02.js"><link rel="prefetch" href="/assets/js/198.082c0a2a.js"><link rel="prefetch" href="/assets/js/199.ffe925cb.js"><link rel="prefetch" href="/assets/js/20.16309d91.js"><link rel="prefetch" href="/assets/js/200.1056ecd7.js"><link rel="prefetch" href="/assets/js/201.44a08d16.js"><link rel="prefetch" href="/assets/js/202.ac0211eb.js"><link rel="prefetch" href="/assets/js/203.75e3e0e3.js"><link rel="prefetch" href="/assets/js/204.791e6a2d.js"><link rel="prefetch" href="/assets/js/205.0f575e08.js"><link rel="prefetch" href="/assets/js/206.19b2897f.js"><link rel="prefetch" href="/assets/js/207.4185b98c.js"><link rel="prefetch" href="/assets/js/208.d90dd3c7.js"><link rel="prefetch" href="/assets/js/209.9ed9f581.js"><link rel="prefetch" href="/assets/js/21.10ff5880.js"><link rel="prefetch" href="/assets/js/210.ccdb4208.js"><link rel="prefetch" href="/assets/js/211.1dbba26a.js"><link rel="prefetch" href="/assets/js/212.a2314180.js"><link rel="prefetch" href="/assets/js/213.42a97dd6.js"><link rel="prefetch" href="/assets/js/214.e8b86fe5.js"><link rel="prefetch" href="/assets/js/215.82122398.js"><link rel="prefetch" href="/assets/js/216.adfc1a6b.js"><link rel="prefetch" href="/assets/js/217.c06c52c8.js"><link rel="prefetch" href="/assets/js/218.e91c9627.js"><link rel="prefetch" href="/assets/js/219.9d07a542.js"><link rel="prefetch" href="/assets/js/22.2e559a67.js"><link rel="prefetch" href="/assets/js/220.9216e09c.js"><link rel="prefetch" href="/assets/js/221.0776c49f.js"><link rel="prefetch" href="/assets/js/222.7e09d42f.js"><link rel="prefetch" href="/assets/js/223.5c211436.js"><link rel="prefetch" href="/assets/js/224.72e3a928.js"><link rel="prefetch" href="/assets/js/225.584b3edc.js"><link rel="prefetch" href="/assets/js/226.244c295b.js"><link rel="prefetch" href="/assets/js/227.22150789.js"><link rel="prefetch" href="/assets/js/228.9943f3a9.js"><link rel="prefetch" href="/assets/js/229.a3e07ea5.js"><link rel="prefetch" href="/assets/js/23.021d79b1.js"><link rel="prefetch" href="/assets/js/230.43c1bf29.js"><link rel="prefetch" href="/assets/js/231.edebe07d.js"><link rel="prefetch" href="/assets/js/232.c1f37a5c.js"><link rel="prefetch" href="/assets/js/233.8dec1f25.js"><link rel="prefetch" href="/assets/js/234.f6752cfb.js"><link rel="prefetch" href="/assets/js/235.4fc8dae6.js"><link rel="prefetch" href="/assets/js/236.4b099e51.js"><link rel="prefetch" href="/assets/js/237.3aafeb34.js"><link rel="prefetch" href="/assets/js/238.027109de.js"><link rel="prefetch" href="/assets/js/239.b3a3bd51.js"><link rel="prefetch" href="/assets/js/24.cfba775a.js"><link rel="prefetch" href="/assets/js/240.9bf2989f.js"><link rel="prefetch" href="/assets/js/241.f0be206e.js"><link rel="prefetch" href="/assets/js/242.dfd56d96.js"><link rel="prefetch" href="/assets/js/243.b336ad24.js"><link rel="prefetch" href="/assets/js/244.df53a30a.js"><link rel="prefetch" href="/assets/js/245.8198e377.js"><link rel="prefetch" href="/assets/js/246.d45378ad.js"><link rel="prefetch" href="/assets/js/247.d241085a.js"><link rel="prefetch" href="/assets/js/248.fb472105.js"><link rel="prefetch" href="/assets/js/249.78c7b41a.js"><link rel="prefetch" href="/assets/js/25.5a6e2d92.js"><link rel="prefetch" href="/assets/js/250.9780220b.js"><link rel="prefetch" href="/assets/js/251.262bfcd0.js"><link rel="prefetch" href="/assets/js/252.f7491bef.js"><link rel="prefetch" href="/assets/js/253.3eb152fd.js"><link rel="prefetch" href="/assets/js/254.27cbd837.js"><link rel="prefetch" href="/assets/js/255.27b08098.js"><link rel="prefetch" href="/assets/js/256.4d10a55a.js"><link rel="prefetch" href="/assets/js/257.eea341a6.js"><link rel="prefetch" href="/assets/js/26.c5dba1c9.js"><link rel="prefetch" href="/assets/js/27.ae8c09ff.js"><link rel="prefetch" href="/assets/js/28.4a1aaa82.js"><link rel="prefetch" href="/assets/js/29.3b9d72ef.js"><link rel="prefetch" href="/assets/js/3.8a30aff6.js"><link rel="prefetch" href="/assets/js/30.097f525a.js"><link rel="prefetch" href="/assets/js/31.f3d13f1f.js"><link rel="prefetch" href="/assets/js/32.828d2c8e.js"><link rel="prefetch" href="/assets/js/33.c5bf98f7.js"><link rel="prefetch" href="/assets/js/34.b7bf363b.js"><link rel="prefetch" href="/assets/js/35.fa4016d1.js"><link rel="prefetch" href="/assets/js/36.ad21133d.js"><link rel="prefetch" href="/assets/js/37.fce8f265.js"><link rel="prefetch" href="/assets/js/38.36c5b7bc.js"><link rel="prefetch" href="/assets/js/39.391d419e.js"><link rel="prefetch" href="/assets/js/4.47bd1fd8.js"><link rel="prefetch" href="/assets/js/40.c855b68c.js"><link rel="prefetch" href="/assets/js/41.24e6d580.js"><link rel="prefetch" href="/assets/js/42.38a75b22.js"><link rel="prefetch" href="/assets/js/43.d607599a.js"><link rel="prefetch" href="/assets/js/44.6a243358.js"><link rel="prefetch" href="/assets/js/45.d50fa580.js"><link rel="prefetch" href="/assets/js/46.55226aab.js"><link rel="prefetch" href="/assets/js/47.43518cd2.js"><link rel="prefetch" href="/assets/js/48.e917f093.js"><link rel="prefetch" href="/assets/js/49.b0b65e59.js"><link rel="prefetch" href="/assets/js/5.34f64f0a.js"><link rel="prefetch" href="/assets/js/50.7be22d09.js"><link rel="prefetch" href="/assets/js/51.fa5d5b5b.js"><link rel="prefetch" href="/assets/js/52.e3a15294.js"><link rel="prefetch" href="/assets/js/53.368fad62.js"><link rel="prefetch" href="/assets/js/54.d2f568a9.js"><link rel="prefetch" href="/assets/js/55.0905432f.js"><link rel="prefetch" href="/assets/js/56.ef9859b2.js"><link rel="prefetch" href="/assets/js/57.900b34d1.js"><link rel="prefetch" href="/assets/js/58.4d11f4f9.js"><link rel="prefetch" href="/assets/js/59.7d5178dc.js"><link rel="prefetch" href="/assets/js/6.8a1434f6.js"><link rel="prefetch" href="/assets/js/60.429a3219.js"><link rel="prefetch" href="/assets/js/61.b00dce9f.js"><link rel="prefetch" href="/assets/js/62.3ae1da38.js"><link rel="prefetch" href="/assets/js/63.168d8505.js"><link rel="prefetch" href="/assets/js/64.3e379ec5.js"><link rel="prefetch" href="/assets/js/65.e38569ce.js"><link rel="prefetch" href="/assets/js/66.f8682bb7.js"><link rel="prefetch" href="/assets/js/67.1f28867a.js"><link rel="prefetch" href="/assets/js/68.f8d2acf5.js"><link rel="prefetch" href="/assets/js/69.4a82fe7f.js"><link rel="prefetch" href="/assets/js/7.0bfc8698.js"><link rel="prefetch" href="/assets/js/70.414d4d7e.js"><link rel="prefetch" href="/assets/js/71.1a2c8782.js"><link rel="prefetch" href="/assets/js/72.392a2c09.js"><link rel="prefetch" href="/assets/js/73.c5c2acfe.js"><link rel="prefetch" href="/assets/js/74.6a115012.js"><link rel="prefetch" href="/assets/js/75.3e8ba22b.js"><link rel="prefetch" href="/assets/js/76.663925fa.js"><link rel="prefetch" href="/assets/js/77.a7147fb4.js"><link rel="prefetch" href="/assets/js/78.1fda8db0.js"><link rel="prefetch" href="/assets/js/79.91895131.js"><link rel="prefetch" href="/assets/js/8.1d7951b0.js"><link rel="prefetch" href="/assets/js/80.1b83d443.js"><link rel="prefetch" href="/assets/js/81.f5a74850.js"><link rel="prefetch" href="/assets/js/82.c94fe5f7.js"><link rel="prefetch" href="/assets/js/83.8af1e30e.js"><link rel="prefetch" href="/assets/js/84.a65aeb29.js"><link rel="prefetch" href="/assets/js/85.7272b53b.js"><link rel="prefetch" href="/assets/js/86.497f3d06.js"><link rel="prefetch" href="/assets/js/87.9cb14c49.js"><link rel="prefetch" href="/assets/js/88.2a8c899b.js"><link rel="prefetch" href="/assets/js/89.07d5218e.js"><link rel="prefetch" href="/assets/js/9.7e52078a.js"><link rel="prefetch" href="/assets/js/90.95f0030c.js"><link rel="prefetch" href="/assets/js/91.01710300.js"><link rel="prefetch" href="/assets/js/92.8304a034.js"><link rel="prefetch" href="/assets/js/93.6cc65bd2.js"><link rel="prefetch" href="/assets/js/94.e348811c.js"><link rel="prefetch" href="/assets/js/95.b3e48f90.js"><link rel="prefetch" href="/assets/js/96.4593862b.js"><link rel="prefetch" href="/assets/js/97.b9f5209f.js"><link rel="prefetch" href="/assets/js/98.004e088e.js"><link rel="prefetch" href="/assets/js/99.274b6802.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.94e8daa7.css">
+  </head>
+  <body class="theme-mode-light">
+    <div id="app" data-server-rendered="true"><div class="theme-container sidebar-open have-rightmenu"><header class="navbar blur"><div title="目录" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/img/vlogo.png" alt="朽木学社" class="logo"> <span class="site-name can-hide">朽木学社</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">🏠 首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="🔥 前端系列教程" class="dropdown-title"><a href="/frontend/" class="link-title">🔥 前端系列教程</a> <span class="title" style="display:none;">🔥 前端系列教程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/c8f128/" class="nav-link">📗 《CSS 教程》</a></li><li class="dropdown-item"><!----> <a href="/pages/8309a5b876fc95e3/" class="nav-link">📗 《HTMl 教程》</a></li><li class="dropdown-item"><!----> <a href="/pages/0796ba76b4b55368/" class="nav-link">📗 《JavaScript教程》</a></li><li class="dropdown-item"><!----> <a href="/es6/f344d070a1031ef7/" class="nav-link">📗 《ES6 教程》</a></li><li class="dropdown-item"><!----> <a href="/pages/e05dce83e5129785/" class="nav-link">📗 《TypeScript 教程》</a></li><li class="dropdown-item"><!----> <a href="/pages/5df969/" class="nav-link">📗 《React 教程》</a></li><li class="dropdown-item"><!----> <a href="/pages/114158caa9e96df0/" class="nav-link">📗 《Vue 教程》</a></li><li class="dropdown-item"><!----> <a href="/pages/e2a169/" class="nav-link">📗 《Webpack 教程》</a></li><li class="dropdown-item"><!----> <a href="/pages/15ee91/" class="nav-link">📗 《设计模式 教程》</a></li><li class="dropdown-item"><!----> <a href="/pages/ed537f/" class="nav-link">📗 《算法与数据结构 教程》</a></li></ul></div></div><div class="nav-item"><a href="/pages/4a8976/" class="nav-link">📚 前端面试题攻略</a></div><div class="nav-item"><a href="/pages/4b9d5c/" class="nav-link">📖 文章收录</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="🔨 实用工具" class="dropdown-title"><!----> <span class="title" style="display:;">🔨 实用工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/41f87d890d0a02af/" class="nav-link">博客搭建</a></li><li class="dropdown-item"><!----> <a href="/pages/8292d8/" class="nav-link">GitHub技巧</a></li><li class="dropdown-item"><!----> <a href="/pages/61f2f95fd7da14fd/" class="nav-link">常用软件</a></li><li class="dropdown-item"><!----> <a href="/pages/03e105/" class="nav-link">写文章技巧</a></li><li class="dropdown-item"><!----> <a href="/pages/9ee271/" class="nav-link">Mac使用技巧</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><!----> <span class="title" style="display:;">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/1c7cc5/" class="nav-link">实用轮子</a></li><li class="dropdown-item"><!----> <a href="/pages/beb6c0bd8a66cea6/" class="nav-link">实用网站</a></li><li class="dropdown-item"><!----> <a href="/pages/f2a556/" class="nav-link">杂货铺</a></li><li class="dropdown-item"><!----> <a href="/friends/" class="nav-link">友情链接</a></li></ul></div></div><div class="nav-item"><a href="/about/" class="nav-link">👤 关于</a></div> <a href="https://github.com/xiumubai/blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar-hover-trigger"></div> <aside class="sidebar" style="display:none;"><div class="blogger"><img src="https://xiumubai.oss-cn-beijing.aliyuncs.com/me/weixin.png"> <div class="blogger-info"><h3>Xiumubai</h3> <span>朽木不雕难成才，知耻后勇凌云志</span></div></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">🏠 首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="🔥 前端系列教程" class="dropdown-title"><a href="/frontend/" class="link-title">🔥 前端系列教程</a> <span class="title" style="display:none;">🔥 前端系列教程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/c8f128/" class="nav-link">📗 《CSS 教程》</a></li><li class="dropdown-item"><!----> <a href="/pages/8309a5b876fc95e3/" class="nav-link">📗 《HTMl 教程》</a></li><li class="dropdown-item"><!----> <a href="/pages/0796ba76b4b55368/" class="nav-link">📗 《JavaScript教程》</a></li><li class="dropdown-item"><!----> <a href="/es6/f344d070a1031ef7/" class="nav-link">📗 《ES6 教程》</a></li><li class="dropdown-item"><!----> <a href="/pages/e05dce83e5129785/" class="nav-link">📗 《TypeScript 教程》</a></li><li class="dropdown-item"><!----> <a href="/pages/5df969/" class="nav-link">📗 《React 教程》</a></li><li class="dropdown-item"><!----> <a href="/pages/114158caa9e96df0/" class="nav-link">📗 《Vue 教程》</a></li><li class="dropdown-item"><!----> <a href="/pages/e2a169/" class="nav-link">📗 《Webpack 教程》</a></li><li class="dropdown-item"><!----> <a href="/pages/15ee91/" class="nav-link">📗 《设计模式 教程》</a></li><li class="dropdown-item"><!----> <a href="/pages/ed537f/" class="nav-link">📗 《算法与数据结构 教程》</a></li></ul></div></div><div class="nav-item"><a href="/pages/4a8976/" class="nav-link">📚 前端面试题攻略</a></div><div class="nav-item"><a href="/pages/4b9d5c/" class="nav-link">📖 文章收录</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="🔨 实用工具" class="dropdown-title"><!----> <span class="title" style="display:;">🔨 实用工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/41f87d890d0a02af/" class="nav-link">博客搭建</a></li><li class="dropdown-item"><!----> <a href="/pages/8292d8/" class="nav-link">GitHub技巧</a></li><li class="dropdown-item"><!----> <a href="/pages/61f2f95fd7da14fd/" class="nav-link">常用软件</a></li><li class="dropdown-item"><!----> <a href="/pages/03e105/" class="nav-link">写文章技巧</a></li><li class="dropdown-item"><!----> <a href="/pages/9ee271/" class="nav-link">Mac使用技巧</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><!----> <span class="title" style="display:;">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/1c7cc5/" class="nav-link">实用轮子</a></li><li class="dropdown-item"><!----> <a href="/pages/beb6c0bd8a66cea6/" class="nav-link">实用网站</a></li><li class="dropdown-item"><!----> <a href="/pages/f2a556/" class="nav-link">杂货铺</a></li><li class="dropdown-item"><!----> <a href="/friends/" class="nav-link">友情链接</a></li></ul></div></div><div class="nav-item"><a href="/about/" class="nav-link">👤 关于</a></div> <a href="https://github.com/xiumubai/blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><a href="/pages/4a8976/" class="sidebar-link">1 前端面试准备</a></li><li><a href="/pages/323c85/" class="sidebar-link">2 程序员面试软技能</a></li><li><a href="/pages/956468/" class="sidebar-link">3 offer收割机之HTML篇</a></li><li><a href="/pages/f5f66f/" class="sidebar-link">4 offer收割机之CSS篇</a></li><li><a href="/pages/739e15/" class="sidebar-link">5 offer收割机之JavaScript篇</a></li><li><a href="/pages/fc9526/" class="sidebar-link">6 offer收割机之性能优化篇</a></li><li><a href="/pages/833648/" class="sidebar-link">7 offer收割机之前端工程化篇</a></li><li><a href="/pages/79089b/" class="sidebar-link">8 offer收割机之计算机网络篇</a></li><li><a href="/pages/7352d9/" class="sidebar-link">9 offer收割机之浏览器原理篇</a></li><li><a href="/pages/b86513/" aria-current="page" class="active sidebar-link">10 offer收割机之手写代码篇</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header level2"><a href="/pages/b86513/#一、javascript-基础" class="sidebar-link">一、JavaScript 基础</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header level3"><a href="/pages/b86513/#_1-手写-object-create" class="sidebar-link">1. 手写 Object.create</a></li><li class="sidebar-sub-header level3"><a href="/pages/b86513/#_2-手写-instanceof-方法" class="sidebar-link">2. 手写 instanceof 方法</a></li><li class="sidebar-sub-header level3"><a href="/pages/b86513/#_3-手写-new-操作符" class="sidebar-link">3. 手写 new 操作符</a></li><li class="sidebar-sub-header level3"><a href="/pages/b86513/#_4-手写-promise" class="sidebar-link">4. 手写 Promise</a></li><li class="sidebar-sub-header level3"><a href="/pages/b86513/#_5-手写-promise-then" class="sidebar-link">5. 手写 Promise.then</a></li><li class="sidebar-sub-header level3"><a href="/pages/b86513/#_6-手写-promise-all" class="sidebar-link">6. 手写 Promise.all</a></li><li class="sidebar-sub-header level3"><a href="/pages/b86513/#_7-手写-promise-race" class="sidebar-link">7. 手写 Promise.race</a></li><li class="sidebar-sub-header level3"><a href="/pages/b86513/#_8-手写防抖函数" class="sidebar-link">8. 手写防抖函数</a></li><li class="sidebar-sub-header level3"><a href="/pages/b86513/#_9-手写节流函数" class="sidebar-link">9. 手写节流函数</a></li><li class="sidebar-sub-header level3"><a href="/pages/b86513/#_10-手写类型判断函数" class="sidebar-link">10. 手写类型判断函数</a></li><li class="sidebar-sub-header level3"><a href="/pages/b86513/#_11-手写-call-函数" class="sidebar-link">11. 手写 call 函数</a></li><li class="sidebar-sub-header level3"><a href="/pages/b86513/#_12-手写-apply-函数" class="sidebar-link">12. 手写 apply 函数</a></li><li class="sidebar-sub-header level3"><a href="/pages/b86513/#_13-手写-bind-函数" class="sidebar-link">13. 手写 bind 函数</a></li><li class="sidebar-sub-header level3"><a href="/pages/b86513/#_14-函数柯里化的实现" class="sidebar-link">14. 函数柯里化的实现</a></li><li class="sidebar-sub-header level3"><a href="/pages/b86513/#_15-实现ajax请求" class="sidebar-link">15. 实现AJAX请求</a></li><li class="sidebar-sub-header level3"><a href="/pages/b86513/#_16-使用promise封装ajax请求" class="sidebar-link">16. 使用Promise封装AJAX请求</a></li><li class="sidebar-sub-header level3"><a href="/pages/b86513/#_17-实现浅拷贝" class="sidebar-link">17. 实现浅拷贝</a></li><li class="sidebar-sub-header level3"><a href="/pages/b86513/#_18-实现深拷贝" class="sidebar-link">18. 实现深拷贝</a></li></ul></li><li class="sidebar-sub-header level2"><a href="/pages/b86513/#二、数据处理" class="sidebar-link">二、数据处理</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header level3"><a href="/pages/b86513/#_1-实现日期格式化函数" class="sidebar-link">1. 实现日期格式化函数</a></li><li class="sidebar-sub-header level3"><a href="/pages/b86513/#_2-交换a-b的值-不能用临时变量" class="sidebar-link">2. 交换a,b的值，不能用临时变量</a></li><li class="sidebar-sub-header level3"><a href="/pages/b86513/#_3-实现数组的乱序输出" class="sidebar-link">3. 实现数组的乱序输出</a></li><li class="sidebar-sub-header level3"><a href="/pages/b86513/#_4-实现数组元素求和" class="sidebar-link">4. 实现数组元素求和</a></li><li class="sidebar-sub-header level3"><a href="/pages/b86513/#_5-实现数组的扁平化" class="sidebar-link">5. 实现数组的扁平化</a></li><li class="sidebar-sub-header level3"><a href="/pages/b86513/#_6-实现数组去重" class="sidebar-link">6. 实现数组去重</a></li><li class="sidebar-sub-header level3"><a href="/pages/b86513/#_7-实现数组的flat方法" class="sidebar-link">7. 实现数组的flat方法</a></li><li class="sidebar-sub-header level3"><a href="/pages/b86513/#_8-实现数组的push方法" class="sidebar-link">8. 实现数组的push方法</a></li><li class="sidebar-sub-header level3"><a href="/pages/b86513/#_9-实现数组的filter方法" class="sidebar-link">9. 实现数组的filter方法</a></li><li class="sidebar-sub-header level3"><a href="/pages/b86513/#_10-实现数组的map方法" class="sidebar-link">10. 实现数组的map方法</a></li><li class="sidebar-sub-header level3"><a href="/pages/b86513/#_11-实现字符串的repeat方法" class="sidebar-link">11. 实现字符串的repeat方法</a></li><li class="sidebar-sub-header level3"><a href="/pages/b86513/#_12-实现字符串翻转" class="sidebar-link">12. 实现字符串翻转</a></li><li class="sidebar-sub-header level3"><a href="/pages/b86513/#_13-将数字每千分位用逗号隔开" class="sidebar-link">13. 将数字每千分位用逗号隔开</a></li><li class="sidebar-sub-header level3"><a href="/pages/b86513/#_14-实现非负大整数相加" class="sidebar-link">14. 实现非负大整数相加</a></li><li class="sidebar-sub-header level3"><a href="/pages/b86513/#_13-实现-add-1-2-3" class="sidebar-link">13. 实现 add(1)(2)(3)</a></li><li class="sidebar-sub-header level3"><a href="/pages/b86513/#_14-实现类数组转化为数组" class="sidebar-link">14. 实现类数组转化为数组</a></li><li class="sidebar-sub-header level3"><a href="/pages/b86513/#_15-使用-reduce-求和" class="sidebar-link">15. 使用 reduce 求和</a></li><li class="sidebar-sub-header level3"><a href="/pages/b86513/#_16-将js对象转化为树形结构" class="sidebar-link">16. 将js对象转化为树形结构</a></li><li class="sidebar-sub-header level3"><a href="/pages/b86513/#_17-使用es5和es6求函数参数的和" class="sidebar-link">17. 使用ES5和ES6求函数参数的和</a></li><li class="sidebar-sub-header level3"><a href="/pages/b86513/#_18-解析-url-params-为对象" class="sidebar-link">18. 解析 URL Params 为对象</a></li></ul></li><li class="sidebar-sub-header level2"><a href="/pages/b86513/#三、场景应用" class="sidebar-link">三、场景应用</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header level3"><a href="/pages/b86513/#_1-循环打印红黄绿" class="sidebar-link">1. 循环打印红黄绿</a></li><li class="sidebar-sub-header level3"><a href="/pages/b86513/#_2-实现每隔一秒打印-1-2-3-4" class="sidebar-link">2. 实现每隔一秒打印 1,2,3,4</a></li><li class="sidebar-sub-header level3"><a href="/pages/b86513/#_3-小孩报数问题" class="sidebar-link">3. 小孩报数问题</a></li><li class="sidebar-sub-header level3"><a href="/pages/b86513/#_4-用promise实现图片的异步加载" class="sidebar-link">4. 用Promise实现图片的异步加载</a></li><li class="sidebar-sub-header level3"><a href="/pages/b86513/#_5-实现发布-订阅模式" class="sidebar-link">5. 实现发布-订阅模式</a></li><li class="sidebar-sub-header level3"><a href="/pages/b86513/#_6-查找文章中出现频率最高的单词" class="sidebar-link">6. 查找文章中出现频率最高的单词</a></li><li class="sidebar-sub-header level3"><a href="/pages/b86513/#_7-封装异步的fetch-使用async-await方式来使用" class="sidebar-link">7. 封装异步的fetch，使用async await方式来使用</a></li><li class="sidebar-sub-header level3"><a href="/pages/b86513/#_8-实现prototype继承" class="sidebar-link">8. 实现prototype继承</a></li><li class="sidebar-sub-header level3"><a href="/pages/b86513/#_9-实现双向数据绑定" class="sidebar-link">9. 实现双向数据绑定</a></li><li class="sidebar-sub-header level3"><a href="/pages/b86513/#_10-实现简单路由" class="sidebar-link">10. 实现简单路由</a></li><li class="sidebar-sub-header level3"><a href="/pages/b86513/#_11-实现斐波那契数列" class="sidebar-link">11. 实现斐波那契数列</a></li><li class="sidebar-sub-header level3"><a href="/pages/b86513/#_12-字符串出现的不重复最长长度" class="sidebar-link">12. 字符串出现的不重复最长长度</a></li><li class="sidebar-sub-header level3"><a href="/pages/b86513/#_13-使用-settimeout-实现-setinterval" class="sidebar-link">13. 使用 setTimeout 实现 setInterval</a></li><li class="sidebar-sub-header level3"><a href="/pages/b86513/#_14-实现-jsonp" class="sidebar-link">14. 实现 jsonp</a></li><li class="sidebar-sub-header level3"><a href="/pages/b86513/#_15-判断对象是否存在循环引用" class="sidebar-link">15. 判断对象是否存在循环引用</a></li></ul></li></ul></li><li><a href="/pages/797d8b/" class="sidebar-link">11 offer收割机之代码输出篇</a></li><li><a href="/pages/6dc9ec/" class="sidebar-link">12LeetCode面试常考题目</a></li><li><a href="/pages/34cb98/" class="sidebar-link">13 offer收割机之Vue篇</a></li><li><a href="/pages/832bf4/" class="sidebar-link">14 offer收割机之vue项目性能优化</a></li><li><a href="/pages/2b0d4c/" class="sidebar-link">15 offer收割机之React篇(上)</a></li><li><a href="/pages/cb0032/" class="sidebar-link">16 offer收割机之React篇(中)</a></li><li><a href="/pages/2ecbb3/" class="sidebar-link">17 offer收割机之React篇(下)</a></li><li><a href="/pages/c5cd3d/" class="sidebar-link">简历模板</a></li></ul> </aside> <div><main class="page"><div class="theme-vdoing-wrapper "><div class="articleInfo-wrap" data-v-06225672><div class="articleInfo" data-v-06225672><ul class="breadcrumbs" data-v-06225672><li data-v-06225672><a href="/" title="首页" class="iconfont icon-home router-link-active" data-v-06225672></a></li> <li data-v-06225672><a href="/categories/?category=%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E6%94%BB%E7%95%A5" title="分类" data-v-06225672>前端面试攻略</a></li></ul> <div class="info" data-v-06225672><div title="作者" class="author iconfont icon-touxiang" data-v-06225672><a href="https://github.com/xiumubai" target="_blank" title="作者" class="beLink" data-v-06225672>xiumubai</a></div> <div title="创建时间" class="date iconfont icon-riqi" data-v-06225672><a href="javascript:;" data-v-06225672>2022-03-13</a></div> <!----></div></div></div> <!----> <div class="content-wrapper"><div class="right-menu-wrapper"><div class="right-menu-margin"><div class="right-menu-title">目录</div> <div class="right-menu-content"></div></div></div> <h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABKFJREFUSA3tVl1oFVcQnrMbrak3QUgkya1akpJYcrUtIqW1JvFBE9LiQ5v6JmJpolbMg32rVrhgoYK0QiMY6i9Y6EMaW5D+xFJaTYItIuK2Kr3+BJNwkxBj05sQY3b3nM6cs2dv9t7NT/vQJw/sndk5M/PNzJkzewGerP+pAmy+ON8lLzUJgA8ZYxYIYZmGYRnctDaWvJJAmTtfP1pvXsBCCPP8QFcCaRkZYACgDZFO4stNIcBCajEOlmmC9XpJ9bAGCaPaPmzPl32dvLSVu3BWCTQs0XQQ6g0DYgwLIoAZbBCdW/i+781o1VVlm/410mw4h06Y7bIPHNyWDyL4FHkX03Q8SrzNhZTZriieckWt7cL6MM85YcLpsi/7O9/iXFT6MswI0DmmpkSaJ0qLxFIm3+i1THHB3zmBH3PYx9CcykcLOeQVVa7QtdxTgQgEleX2AjHYfwA+2ddV77ruGoJUbhGDI09YSNXyMpUt5ylOzxgbUmtOp7NmbNt8v3arjTBfYELmLUV+M+nSawNNAUqpT3ClJWg5I3BLT+cGW/DXNGCa6tx1aakCGEigArTn4TDIPdrXXYKCZNrHLMCOEPvHBlLQ99s9eHB7EB6NTki73CVPQ2F5MSx/uRQixfmq7rK0wYD8w8E905bnPDfwoWs/rfv93NWN/ZfvwsLIU7A09gxECyISeGJkHAau98L97tuw7NXnoPyNF8FcYGLGKsOs0mN3OEyec9esGW/ZEl945dTP34wlR2FZVQWU1q0Cw8Tr7p+hgLLNL0FPxx/Q35mA8aEUrH6nCgwEl0tn7wUiZYJnNRh6DK4UH/k0lfyrsBKdPVv/AriGIQcEDQZ65LBAGe2Rzui9Ybjz7XUppz1/uKBbyVPGkN3ZAeC6hr0x7Nr38N5+EqkoOm17xpoqR9ohQF55ERSvr4Dkr3chNfC3DMzGJlNBElW8w9nsGQvhNGIzDkXzCg8cLK951xHsFBlTJspJNi3ZFIMF2AeDV3q8DNOB+YHi6QTrChDIWDBRi5U5f+ZMfJLu3ccrqxtdxk4SKH336LFxSmkqefwU5T8fhdSdQf9IVKD6aNiwI/hnmcAZ91isYMJIaCUCx9W098+LgruikeTqzqqxKPUwqJyCPJiyemVVZBOijDGjD38Os0jOiSPL1z3SPjXNANbiNPXAdzTfukjjuknNBbyz3nwgTd3AVFqUJ5hpHlq9MveLnWwttUfoygBmvVjuikxND3znrhsELnZk7k+OjIGxeNEkomyLVta0xxn+HZhjBc4YZ/AFjHjz9u3xRZl2BN4aq9nFwWh16IrQ1aHHEd3j1+4/dB9OtH4e29A2H1DyHQRmOSfQZ1Fy7MHBTGB6J/Djq6p3OxyO2cB+4Car7v/o3GXgfAkj23+x9ID1Teoamo/SXcbvSf2PX7Vc8DdCmE1vN9di+32P9/5YR3vLnhCVGUWBjEkr3yh4H8v9CzmsbdhzOKzsJKM90iFdaTMjRPhGVsakRvOaRidljo6H6G7j+ctrJpsP+4COhDIl0La2+FS4+5mlocBaXY5QnGZysIBYoeSsl5qQzrSj/cgNrfuEzlWBfwA+EjrZyWUvpAAAAABJRU5ErkJggg==">10 offer收割机之手写代码篇<!----></h1>  <div class="theme-vdoing-content content__default"><p><img src="https://xiumubai.oss-cn-beijing.aliyuncs.com/blog/1621676946378-71d6b405-ef4e-42e4-9e42-f9c9aafcefb6.png" alt="手写代码面试题.png"></p> <p>##手写系列建议配合鲨鱼哥的掘金手写面试题文章一起看（更多更全）</p> <h2 id="一、javascript-基础"><a href="#一、javascript-基础" class="header-anchor">#</a> 一、JavaScript 基础</h2> <h3 id="_1-手写-object-create"><a href="#_1-手写-object-create" class="header-anchor">#</a> 1. 手写 Object.create</h3> <p>思路：将传入的对象作为原型</p> <div class="language- extra-class"><pre class="language-text"><code>function create(obj) {
+  function F() {}
+  F.prototype = obj
+  return new F()
+}
+</code></pre></div><h3 id="_2-手写-instanceof-方法"><a href="#_2-手写-instanceof-方法" class="header-anchor">#</a> 2. 手写 instanceof 方法</h3> <p>instanceof 运算符用于判断构造函数的 prototype 属性是否出现在对象的原型链中的任何位置。</p> <p>实现步骤：</p> <ol><li>首先获取类型的原型</li> <li>然后获得对象的原型</li> <li>然后一直循环判断对象的原型是否等于类型的原型，直到对象原型为 <code>null</code>，因为原型链最终为 <code>null</code></li></ol> <p>具体实现：</p> <div class="language- extra-class"><pre class="language-text"><code>function myInstanceof(left, right) {
+  let proto = Object.getPrototypeOf(left), // 获取对象的原型
+      prototype = right.prototype; // 获取构造函数的 prototype 对象
+
+  // 判断构造函数的 prototype 对象是否在对象的原型链上
+  while (true) {
+    if (!proto) return false;
+    if (proto === prototype) return true;
+
+    proto = Object.getPrototypeOf(proto);
+  }
+}
+</code></pre></div><h3 id="_3-手写-new-操作符"><a href="#_3-手写-new-操作符" class="header-anchor">#</a> 3. 手写 new 操作符</h3> <p>在调用 <code>new</code> 的过程中会发生以上四件事情：</p> <p>（1）首先创建了一个新的空对象</p> <p>（2）设置原型，将对象的原型设置为函数的 prototype 对象。</p> <p>（3）让函数的 this 指向这个对象，执行构造函数的代码（为这个新对象添加属性）</p> <p>（4）判断函数的返回值类型，如果是值类型，返回创建的对象。如果是引用类型，就返回这个引用类型的对象。</p> <div class="language- extra-class"><pre class="language-text"><code>function objectFactory() {
+  let newObject = null;
+  let constructor = Array.prototype.shift.call(arguments);
+  let result = null;
+  // 判断参数是否是一个函数
+  if (typeof constructor !== &quot;function&quot;) {
+    console.error(&quot;type error&quot;);
+    return;
+  }
+  // 新建一个空对象，对象的原型为构造函数的 prototype 对象
+  newObject = Object.create(constructor.prototype);
+  // 将 this 指向新建对象，并执行函数
+  result = constructor.apply(newObject, arguments);
+  // 判断返回对象
+  let flag = result &amp;&amp; (typeof result === &quot;object&quot; || typeof result === &quot;function&quot;);
+  // 判断返回结果
+  return flag ? result : newObject;
+}
+// 使用方法
+objectFactory(构造函数, 初始化参数);
+</code></pre></div><h3 id="_4-手写-promise"><a href="#_4-手写-promise" class="header-anchor">#</a> 4. 手写 Promise</h3> <div class="language- extra-class"><pre class="language-text"><code>const PENDING = &quot;pending&quot;;
+const RESOLVED = &quot;resolved&quot;;
+const REJECTED = &quot;rejected&quot;;
+
+function MyPromise(fn) {
+  // 保存初始化状态
+  var self = this;
+
+  // 初始化状态
+  this.state = PENDING;
+
+  // 用于保存 resolve 或者 rejected 传入的值
+  this.value = null;
+
+  // 用于保存 resolve 的回调函数
+  this.resolvedCallbacks = [];
+
+  // 用于保存 reject 的回调函数
+  this.rejectedCallbacks = [];
+
+  // 状态转变为 resolved 方法
+  function resolve(value) {
+    // 判断传入元素是否为 Promise 值，如果是，则状态改变必须等待前一个状态改变后再进行改变
+    if (value instanceof MyPromise) {
+      return value.then(resolve, reject);
+    }
+
+    // 保证代码的执行顺序为本轮事件循环的末尾
+    setTimeout(() =&gt; {
+      // 只有状态为 pending 时才能转变，
+      if (self.state === PENDING) {
+        // 修改状态
+        self.state = RESOLVED;
+
+        // 设置传入的值
+        self.value = value;
+
+        // 执行回调函数
+        self.resolvedCallbacks.forEach(callback =&gt; {
+          callback(value);
+        });
+      }
+    }, 0);
+  }
+
+  // 状态转变为 rejected 方法
+  function reject(value) {
+    // 保证代码的执行顺序为本轮事件循环的末尾
+    setTimeout(() =&gt; {
+      // 只有状态为 pending 时才能转变
+      if (self.state === PENDING) {
+        // 修改状态
+        self.state = REJECTED;
+
+        // 设置传入的值
+        self.value = value;
+
+        // 执行回调函数
+        self.rejectedCallbacks.forEach(callback =&gt; {
+          callback(value);
+        });
+      }
+    }, 0);
+  }
+
+  // 将两个方法传入函数执行
+  try {
+    fn(resolve, reject);
+  } catch (e) {
+    // 遇到错误时，捕获错误，执行 reject 函数
+    reject(e);
+  }
+}
+
+MyPromise.prototype.then = function(onResolved, onRejected) {
+  // 首先判断两个参数是否为函数类型，因为这两个参数是可选参数
+  onResolved =
+    typeof onResolved === &quot;function&quot;
+      ? onResolved
+      : function(value) {
+          return value;
+        };
+
+  onRejected =
+    typeof onRejected === &quot;function&quot;
+      ? onRejected
+      : function(error) {
+          throw error;
+        };
+
+  // 如果是等待状态，则将函数加入对应列表中
+  if (this.state === PENDING) {
+    this.resolvedCallbacks.push(onResolved);
+    this.rejectedCallbacks.push(onRejected);
+  }
+
+  // 如果状态已经凝固，则直接执行对应状态的函数
+
+  if (this.state === RESOLVED) {
+    onResolved(this.value);
+  }
+
+  if (this.state === REJECTED) {
+    onRejected(this.value);
+  }
+};
+</code></pre></div><h3 id="_5-手写-promise-then"><a href="#_5-手写-promise-then" class="header-anchor">#</a> 5. 手写 Promise.then</h3> <p><code>then</code> 方法返回一个新的 <code>promise</code> 实例，为了在 <code>promise</code> 状态发生变化时（<code>resolve</code> / <code>reject</code> 被调用时）再执行 <code>then</code> 里的函数，我们使用一个 <code>callbacks</code> 数组先把传给then的函数暂存起来，等状态改变时再调用。</p> <p><strong>那么，怎么保证后一个</strong> <code>**then**</code> <strong>里的方法在前一个</strong> <code>**then**</code><strong>（可能是异步）结束之后再执行呢？</strong></p> <p>我们可以将传给 <code>then</code> 的函数和新 <code>promise</code> 的 <code>resolve</code> 一起 <code>push</code> 到前一个 <code>promise</code> 的 <code>callbacks</code> 数组中，达到承前启后的效果：</p> <ul><li>承前：当前一个 <code>promise</code> 完成后，调用其 <code>resolve</code> 变更状态，在这个 <code>resolve</code> 里会依次调用 <code>callbacks</code> 里的回调，这样就执行了 <code>then</code> 里的方法了</li> <li>启后：上一步中，当 <code>then</code> 里的方法执行完成后，返回一个结果，如果这个结果是个简单的值，就直接调用新 <code>promise</code> 的 <code>resolve</code>，让其状态变更，这又会依次调用新 <code>promise</code> 的 <code>callbacks</code> 数组里的方法，循环往复。。如果返回的结果是个 <code>promise</code>，则需要等它完成之后再触发新 <code>promise</code> 的 <code>resolve</code>，所以可以在其结果的 <code>then</code> 里调用新 <code>promise</code> 的 <code>resolve</code></li></ul> <div class="language- extra-class"><pre class="language-text"><code>then(onFulfilled, onReject){
+    // 保存前一个promise的this
+    const self = this; 
+    return new MyPromise((resolve, reject) =&gt; {
+      // 封装前一个promise成功时执行的函数
+      let fulfilled = () =&gt; {
+        try{
+          const result = onFulfilled(self.value); // 承前
+          return result instanceof MyPromise? result.then(resolve, reject) : resolve(result); //启后
+        }catch(err){
+          reject(err)
+        }
+      }
+      // 封装前一个promise失败时执行的函数
+      let rejected = () =&gt; {
+        try{
+          const result = onReject(self.reason);
+          return result instanceof MyPromise? result.then(resolve, reject) : reject(result);
+        }catch(err){
+          reject(err)
+        }
+      }
+      switch(self.status){
+        case PENDING: 
+          self.onFulfilledCallbacks.push(fulfilled);
+          self.onRejectedCallbacks.push(rejected);
+          break;
+        case FULFILLED:
+          fulfilled();
+          break;
+        case REJECT:
+          rejected();
+          break;
+      }
+    })
+   }
+</code></pre></div><p><strong>注意：</strong></p> <ul><li>连续多个 <code>then</code> 里的回调方法是同步注册的，但注册到了不同的 <code>callbacks</code> 数组中，因为每次 <code>then</code> 都返回新的 <code>promise</code> 实例（参考上面的例子和图）</li> <li>注册完成后开始执行构造函数中的异步事件，异步完成之后依次调用 <code>callbacks</code> 数组中提前注册的回调</li></ul> <h3 id="_6-手写-promise-all"><a href="#_6-手写-promise-all" class="header-anchor">#</a> 6. 手写 Promise.all</h3> <p><strong>1) 核心思路</strong></p> <ol><li>接收一个 Promise 实例的数组或具有 Iterator 接口的对象作为参数</li> <li>这个方法返回一个新的 promise 对象，</li> <li>遍历传入的参数，用Promise.resolve()将参数&quot;包一层&quot;，使其变成一个promise对象</li> <li>参数所有回调成功才是成功，返回值数组与参数顺序一致</li> <li>参数数组其中一个失败，则触发失败状态，第一个触发失败的 Promise 错误信息作为 Promise.all 的错误信息。</li></ol> <p><strong>2）实现代码</strong></p> <p>一般来说，Promise.all 用来处理多个并发请求，也是为了页面数据构造的方便，将一个页面所用到的在不同接口的数据一起请求过来，不过，如果其中一个接口失败了，多个请求也就失败了，页面可能啥也出不来，这就看当前页面的耦合程度了</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">promiseAll</span><span class="token punctuation">(</span><span class="token parameter">promises</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>Array<span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span>promises<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">TypeError</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">argument must be a array</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">var</span> resolvedCounter <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> promiseNum <span class="token operator">=</span> promises<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+    <span class="token keyword">var</span> resolvedResult <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> promiseNum<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>promises<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">value</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+        resolvedCounter<span class="token operator">++</span><span class="token punctuation">;</span>
+        resolvedResult<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> value<span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>resolvedCounter <span class="token operator">==</span> promiseNum<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token function">resolve</span><span class="token punctuation">(</span>resolvedResult<span class="token punctuation">)</span>
+          <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token parameter">error</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">reject</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// test</span>
+<span class="token keyword">let</span> p1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">let</span> p2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">2000</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">let</span> p3 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">3000</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token function">promiseAll</span><span class="token punctuation">(</span><span class="token punctuation">[</span>p3<span class="token punctuation">,</span> p1<span class="token punctuation">,</span> p2<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">res</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span> <span class="token comment">// [3, 1, 2]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="_7-手写-promise-race"><a href="#_7-手写-promise-race" class="header-anchor">#</a> 7. 手写 Promise.race</h3> <p>该方法的参数是 Promise 实例数组, 然后其 then 注册的回调方法是数组中的某一个 Promise 的状态变为 fulfilled 的时候就执行. 因为 Promise 的状态<strong>只能改变一次</strong>, 那么我们只需要把 Promise.race 中产生的 Promise 对象的 resolve 方法, 注入到数组中的每一个 Promise 实例中的回调函数中即可.</p> <div class="language- extra-class"><pre class="language-text"><code>Promise.race = function (args) {
+  return new Promise((resolve, reject) =&gt; {
+    for (let i = 0, len = args.length; i &lt; len; i++) {
+      args[i].then(resolve, reject)
+    }
+  })
+}
+</code></pre></div><h3 id="_8-手写防抖函数"><a href="#_8-手写防抖函数" class="header-anchor">#</a> 8. 手写防抖函数</h3> <p>函数防抖是指在事件被触发 n 秒后再执行回调，如果在这 n 秒内事件又被触发，则重新计时。这可以使用在一些点击请求的事件上，避免因为用户的多次点击向后端发送多次请求。</p> <div class="language- extra-class"><pre class="language-text"><code>// 函数防抖的实现
+function debounce(fn, wait) {
+  let timer = null;
+
+  return function() {
+    let context = this,
+        args = arguments;
+
+    // 如果此时存在定时器的话，则取消之前的定时器重新记时
+    if (timer) {
+      clearTimeout(timer);
+      timer = null;
+    }
+
+    // 设置定时器，使事件间隔指定事件后执行
+    timer = setTimeout(() =&gt; {
+      fn.apply(context, args);
+    }, wait);
+  };
+}
+</code></pre></div><h3 id="_9-手写节流函数"><a href="#_9-手写节流函数" class="header-anchor">#</a> 9. 手写节流函数</h3> <p>函数节流是指规定一个单位时间，在这个单位时间内，只能有一次触发事件的回调函数执行，如果在同一个单位时间内某事件被触发多次，只有一次能生效。节流可以使用在 scroll 函数的事件监听上，通过事件节流来降低事件调用的频率。</p> <div class="language- extra-class"><pre class="language-text"><code>// 函数节流的实现;
+function throttle(fn, delay) {
+  let curTime = Date.now();
+
+  return function() {
+    let context = this,
+        args = arguments,
+        nowTime = Date.now();
+
+    // 如果两次时间间隔超过了指定时间，则执行函数。
+    if (nowTime - curTime &gt;= delay) {
+      curTime = Date.now();
+      return fn.apply(context, args);
+    }
+  };
+}
+</code></pre></div><h3 id="_10-手写类型判断函数"><a href="#_10-手写类型判断函数" class="header-anchor">#</a> 10. 手写类型判断函数</h3> <div class="language- extra-class"><pre class="language-text"><code>function getType(value) {
+  // 判断数据是 null 的情况
+  if (value === null) {
+    return value + &quot;&quot;;
+  }
+  // 判断数据是引用类型的情况
+  if (typeof value === &quot;object&quot;) {
+    let valueClass = Object.prototype.toString.call(value),
+      type = valueClass.split(&quot; &quot;)[1].split(&quot;&quot;);
+    type.pop();
+    return type.join(&quot;&quot;).toLowerCase();
+  } else {
+    // 判断数据是基本数据类型的情况和函数的情况
+    return typeof value;
+  }
+}
+</code></pre></div><h3 id="_11-手写-call-函数"><a href="#_11-手写-call-函数" class="header-anchor">#</a> 11. 手写 call 函数</h3> <p>call 函数的实现步骤：</p> <ol><li>判断调用对象是否为函数，即使我们是定义在函数的原型上的，但是可能出现使用 call 等方式调用的情况。</li> <li>判断传入上下文对象是否存在，如果不存在，则设置为 window 。</li> <li>处理传入的参数，截取第一个参数后的所有参数。</li> <li>将函数作为上下文对象的一个属性。</li> <li>使用上下文对象来调用这个方法，并保存返回结果。</li> <li>删除刚才新增的属性。</li> <li>返回结果。</li></ol> <div class="language- extra-class"><pre class="language-text"><code>// call函数实现
+Function.prototype.myCall = function(context) {
+  // 判断调用对象
+  if (typeof this !== &quot;function&quot;) {
+    console.error(&quot;type error&quot;);
+  }
+  // 获取参数
+  let args = [...arguments].slice(1),
+      result = null;
+  // 判断 context 是否传入，如果未传入则设置为 window
+  context = context || window;
+  // 将调用函数设为对象的方法
+  context.fn = this;
+  // 调用函数
+  result = context.fn(...args);
+  // 将属性删除
+  delete context.fn;
+  return result;
+};
+</code></pre></div><h3 id="_12-手写-apply-函数"><a href="#_12-手写-apply-函数" class="header-anchor">#</a> 12. 手写 apply 函数</h3> <p>apply 函数的实现步骤：</p> <ol><li>判断调用对象是否为函数，即使我们是定义在函数的原型上的，但是可能出现使用 call 等方式调用的情况。</li> <li>判断传入上下文对象是否存在，如果不存在，则设置为 window 。</li> <li>将函数作为上下文对象的一个属性。</li> <li>判断参数值是否传入</li> <li>使用上下文对象来调用这个方法，并保存返回结果。</li> <li>删除刚才新增的属性</li> <li>返回结果</li></ol> <div class="language- extra-class"><pre class="language-text"><code>// apply 函数实现
+Function.prototype.myApply = function(context) {
+  // 判断调用对象是否为函数
+  if (typeof this !== &quot;function&quot;) {
+    throw new TypeError(&quot;Error&quot;);
+  }
+  let result = null;
+  // 判断 context 是否存在，如果未传入则为 window
+  context = context || window;
+  // 将函数设为对象的方法
+  context.fn = this;
+  // 调用方法
+  if (arguments[1]) {
+    result = context.fn(...arguments[1]);
+  } else {
+    result = context.fn();
+  }
+  // 将属性删除
+  delete context.fn;
+  return result;
+};
+</code></pre></div><h3 id="_13-手写-bind-函数"><a href="#_13-手写-bind-函数" class="header-anchor">#</a> 13. 手写 bind 函数</h3> <p>bind 函数的实现步骤：</p> <ol><li>判断调用对象是否为函数，即使我们是定义在函数的原型上的，但是可能出现使用 call 等方式调用的情况。</li> <li>保存当前函数的引用，获取其余传入参数值。</li> <li>创建一个函数返回</li> <li>函数内部使用 apply 来绑定函数调用，需要判断函数作为构造函数的情况，这个时候需要传入当前函数的 this 给 apply 调用，其余情况都传入指定的上下文对象。</li></ol> <div class="language- extra-class"><pre class="language-text"><code>// bind 函数实现
+Function.prototype.myBind = function(context) {
+  // 判断调用对象是否为函数
+  if (typeof this !== &quot;function&quot;) {
+    throw new TypeError(&quot;Error&quot;);
+  }
+  // 获取参数
+  var args = [...arguments].slice(1),
+      fn = this;
+  return function Fn() {
+    // 根据调用方式，传入不同绑定值
+    return fn.apply(
+      this instanceof Fn ? this : context,
+      args.concat(...arguments)
+    );
+  };
+};
+</code></pre></div><h3 id="_14-函数柯里化的实现"><a href="#_14-函数柯里化的实现" class="header-anchor">#</a> 14. 函数柯里化的实现</h3> <p>函数柯里化指的是一种将使用多个参数的一个函数转换成一系列使用一个参数的函数的技术。</p> <div class="language- extra-class"><pre class="language-text"><code>function curry(fn, args) {
+  // 获取函数需要的参数长度
+  let length = fn.length;
+
+  args = args || [];
+
+  return function() {
+    let subArgs = args.slice(0);
+
+    // 拼接得到现有的所有参数
+    for (let i = 0; i &lt; arguments.length; i++) {
+      subArgs.push(arguments[i]);
+    }
+
+    // 判断参数的长度是否已经满足函数所需参数的长度
+    if (subArgs.length &gt;= length) {
+      // 如果满足，执行函数
+      return fn.apply(this, subArgs);
+    } else {
+      // 如果不满足，递归返回科里化的函数，等待参数的传入
+      return curry.call(this, fn, subArgs);
+    }
+  };
+}
+
+// es6 实现
+function curry(fn, ...args) {
+  return fn.length &lt;= args.length ? fn(...args) : curry.bind(null, fn, ...args);
+}
+</code></pre></div><h3 id="_15-实现ajax请求"><a href="#_15-实现ajax请求" class="header-anchor">#</a> 15. 实现AJAX请求</h3> <p>AJAX是 Asynchronous JavaScript and XML 的缩写，指的是通过 JavaScript 的 异步通信，从服务器获取 XML 文档从中提取数据，再更新当前网页的对应部分，而不用刷新整个网页。</p> <p>创建AJAX请求的步骤：</p> <ul><li><strong>创建一个 XMLHttpRequest 对象。</strong></li> <li>在这个对象上<strong>使用 open 方法创建一个 HTTP 请求</strong>，open 方法所需要的参数是请求的方法、请求的地址、是否异步和用户的认证信息。</li> <li>在发起请求前，可以为这个对象<strong>添加一些信息和监听函数</strong>。比如说可以通过 setRequestHeader 方法来为请求添加头信息。还可以为这个对象添加一个状态监听函数。一个 XMLHttpRequest 对象一共有 5 个状态，当它的状态变化时会触发onreadystatechange 事件，可以通过设置监听函数，来处理请求成功后的结果。当对象的 readyState 变为 4 的时候，代表服务器返回的数据接收完成，这个时候可以通过判断请求的状态，如果状态是 2xx 或者 304 的话则代表返回正常。这个时候就可以通过 response 中的数据来对页面进行更新了。</li> <li>当对象的属性和监听函数设置完成后，最后调<strong>用 send 方法来向服务器发起请求</strong>，可以传入参数作为发送的数据体。</li></ul> <div class="language- extra-class"><pre class="language-text"><code>const SERVER_URL = &quot;/server&quot;;
+let xhr = new XMLHttpRequest();
+// 创建 Http 请求
+xhr.open(&quot;GET&quot;, SERVER_URL, true);
+// 设置状态监听函数
+xhr.onreadystatechange = function() {
+  if (this.readyState !== 4) return;
+  // 当请求成功时
+  if (this.status === 200) {
+    handle(this.response);
+  } else {
+    console.error(this.statusText);
+  }
+};
+// 设置请求失败时的监听函数
+xhr.onerror = function() {
+  console.error(this.statusText);
+};
+// 设置请求头信息
+xhr.responseType = &quot;json&quot;;
+xhr.setRequestHeader(&quot;Accept&quot;, &quot;application/json&quot;);
+// 发送 Http 请求
+xhr.send(null);
+</code></pre></div><h3 id="_16-使用promise封装ajax请求"><a href="#_16-使用promise封装ajax请求" class="header-anchor">#</a> 16. 使用Promise封装AJAX请求</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// promise 封装实现：</span>
+<span class="token keyword">function</span> <span class="token function">getJSON</span><span class="token punctuation">(</span><span class="token parameter">url</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 创建一个 promise 对象</span>
+  <span class="token keyword">let</span> promise <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> xhr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">XMLHttpRequest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 新建一个 http 请求</span>
+    xhr<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token string">&quot;GET&quot;</span><span class="token punctuation">,</span> url<span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 设置状态的监听函数</span>
+    xhr<span class="token punctuation">.</span><span class="token function-variable function">onreadystatechange</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>readyState <span class="token operator">!==</span> <span class="token number">4</span><span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
+      <span class="token comment">// 当请求成功或失败时，改变 promise 的状态</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>status <span class="token operator">===</span> <span class="token number">200</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>response<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token function">reject</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>statusText<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token comment">// 设置错误监听函数</span>
+    xhr<span class="token punctuation">.</span><span class="token function-variable function">onerror</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">reject</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>statusText<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token comment">// 设置响应的数据类型</span>
+    xhr<span class="token punctuation">.</span>responseType <span class="token operator">=</span> <span class="token string">&quot;json&quot;</span><span class="token punctuation">;</span>
+    <span class="token comment">// 设置请求头信息</span>
+    xhr<span class="token punctuation">.</span><span class="token function">setRequestHeader</span><span class="token punctuation">(</span><span class="token string">&quot;Accept&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;application/json&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 发送 http 请求</span>
+    xhr<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> promise<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_17-实现浅拷贝"><a href="#_17-实现浅拷贝" class="header-anchor">#</a> 17. 实现浅拷贝</h3> <p>浅拷贝是指，一个新的对象对原始对象的属性值进行精确地拷贝，如果拷贝的是基本数据类型，拷贝的就是基本数据类型的值，如果是引用数据类型，拷贝的就是内存地址。如果其中一个对象的引用内存地址发生改变，另一个对象也会发生变化。</p> <h4 id="_1-object-assign"><a href="#_1-object-assign" class="header-anchor">#</a> （1）Object.assign()</h4> <p><code>Object.assign()</code>是ES6中对象的拷贝方法，接受的第一个参数是目标对象，其余参数是源对象，用法：<code>Object.assign(target, source_1, ···)</code>，该方法可以实现浅拷贝，也可以实现一维对象的深拷贝。</p> <p><strong>注意：</strong></p> <ul><li>如果目标对象和源对象有同名属性，或者多个源对象有同名属性，则后面的属性会覆盖前面的属性。</li> <li>如果该函数只有一个参数，当参数为对象时，直接返回该对象；当参数不是对象时，会先将参数转为对象然后返回。</li> <li>因为<code>null</code> 和 <code>undefined</code> 不能转化为对象，所以第一个参数不能为<code>null</code>或 <code>undefined</code>，会报错。</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> target <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token literal-property property">a</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> object2 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token literal-property property">b</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> object3 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token literal-property property">c</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span>target<span class="token punctuation">,</span>object2<span class="token punctuation">,</span>object3<span class="token punctuation">)</span><span class="token punctuation">;</span>  
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>target<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// {a: 1, b: 2, c: 3}</span>
+</code></pre></div><h4 id="_2-扩展运算符"><a href="#_2-扩展运算符" class="header-anchor">#</a> （2）扩展运算符</h4> <p>使用扩展运算符可以在构造字面量对象的时候，进行属性的拷贝。语法：<code>let cloneObj = { ...obj };</code></p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> obj1 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token literal-property property">a</span><span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token literal-property property">b</span><span class="token operator">:</span><span class="token punctuation">{</span><span class="token literal-property property">c</span><span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token keyword">let</span> obj2 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token operator">...</span>obj1<span class="token punctuation">}</span><span class="token punctuation">;</span>
+obj1<span class="token punctuation">.</span>a <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>obj1<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//{a:2,b:{c:1}}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>obj2<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//{a:1,b:{c:1}}</span>
+obj1<span class="token punctuation">.</span>b<span class="token punctuation">.</span>c <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>obj1<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//{a:2,b:{c:2}}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>obj2<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//{a:1,b:{c:2}}</span>
+</code></pre></div><h4 id="_3-数组方法实现数组浅拷贝"><a href="#_3-数组方法实现数组浅拷贝" class="header-anchor">#</a> （3）数组方法实现数组浅拷贝</h4> <h6 id="_1-array-prototype-slice"><a href="#_1-array-prototype-slice" class="header-anchor">#</a> <strong>1）Array.prototype.slice</strong></h6> <ul><li><code>slice()</code>方法是JavaScript数组的一个方法，这个方法可以从已有数组中返回选定的元素：用法：<code>array.slice(start, end)</code>，该方法不会改变原始数组。</li> <li>该方法有两个参数，两个参数都可选，如果两个参数都不写，就可以实现一个数组的浅拷贝。</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// [1,2,3,4]</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">===</span> arr<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//false</span>
+</code></pre></div><h6 id="_2-array-prototype-concat"><a href="#_2-array-prototype-concat" class="header-anchor">#</a> <strong>2）Array.prototype.concat</strong></h6> <ul><li><code>concat()</code> 方法用于合并两个或多个数组。此方法不会更改现有数组，而是返回一个新数组。</li> <li>该方法有两个参数，两个参数都可选，如果两个参数都不写，就可以实现一个数组的浅拷贝。</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr<span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// [1,2,3,4]</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr<span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">===</span> arr<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//false</span>
+</code></pre></div><h4 id="_4-手写实现浅拷贝"><a href="#_4-手写实现浅拷贝" class="header-anchor">#</a> （4）手写实现浅拷贝</h4> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 浅拷贝的实现;</span>
+
+<span class="token keyword">function</span> <span class="token function">shallowCopy</span><span class="token punctuation">(</span><span class="token parameter">object</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 只拷贝对象</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>object <span class="token operator">||</span> <span class="token keyword">typeof</span> object <span class="token operator">!==</span> <span class="token string">&quot;object&quot;</span><span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// 根据 object 的类型判断是新建一个数组还是对象</span>
+  <span class="token keyword">let</span> newObject <span class="token operator">=</span> Array<span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span>object<span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// 遍历 object，并且判断是 object 的属性才拷贝</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> key <span class="token keyword">in</span> object<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>object<span class="token punctuation">.</span><span class="token function">hasOwnProperty</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      newObject<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> object<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">return</span> newObject<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token comment">// 浅拷贝的实现;</span>
+
+<span class="token keyword">function</span> <span class="token function">shallowCopy</span><span class="token punctuation">(</span><span class="token parameter">object</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 只拷贝对象</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>object <span class="token operator">||</span> <span class="token keyword">typeof</span> object <span class="token operator">!==</span> <span class="token string">&quot;object&quot;</span><span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// 根据 object 的类型判断是新建一个数组还是对象</span>
+  <span class="token keyword">let</span> newObject <span class="token operator">=</span> Array<span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span>object<span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// 遍历 object，并且判断是 object 的属性才拷贝</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> key <span class="token keyword">in</span> object<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>object<span class="token punctuation">.</span><span class="token function">hasOwnProperty</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      newObject<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> object<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">return</span> newObject<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token comment">// 浅拷贝的实现;</span>
+<span class="token keyword">function</span> <span class="token function">shallowCopy</span><span class="token punctuation">(</span><span class="token parameter">object</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 只拷贝对象</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>object <span class="token operator">||</span> <span class="token keyword">typeof</span> object <span class="token operator">!==</span> <span class="token string">&quot;object&quot;</span><span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
+  <span class="token comment">// 根据 object 的类型判断是新建一个数组还是对象</span>
+  <span class="token keyword">let</span> newObject <span class="token operator">=</span> Array<span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span>object<span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token comment">// 遍历 object，并且判断是 object 的属性才拷贝</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> key <span class="token keyword">in</span> object<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>object<span class="token punctuation">.</span><span class="token function">hasOwnProperty</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      newObject<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> object<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> newObject<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_18-实现深拷贝"><a href="#_18-实现深拷贝" class="header-anchor">#</a> 18. 实现深拷贝</h3> <ul><li>**浅拷贝：**浅拷贝指的是将一个对象的属性值复制到另一个对象，如果有的属性的值为引用类型的话，那么会将这个引用的地址复制给对象，因此两个对象会有同一个引用类型的引用。浅拷贝可以使用  Object.assign 和展开运算符来实现。</li> <li>**深拷贝：**深拷贝相对浅拷贝而言，如果遇到属性值为引用类型的时候，它新建一个引用类型并将对应的值复制给它，因此对象获得的一个新的引用类型而不是一个原有类型的引用。深拷贝对于一些对象可以使用 JSON 的两个函数来实现，但是由于 JSON 的对象格式比 js 的对象格式更加严格，所以如果属性值里边出现函数或者 Symbol 类型的值时，会转换失败</li></ul> <h4 id="_1-json-stringify"><a href="#_1-json-stringify" class="header-anchor">#</a> （1）JSON.stringify()</h4> <ul><li><code>JSON.parse(JSON.stringify(obj))</code>是目前比较常用的深拷贝方法之一，它的原理就是利用<code>JSON.stringify</code> 将<code>js</code>对象序列化（JSON字符串），再使用<code>JSON.parse</code>来反序列化(还原)<code>js</code>对象。</li> <li>这个方法可以简单粗暴的实现深拷贝，但是还存在问题，拷贝的对象中如果有函数，undefined，symbol，当使用过<code>JSON.stringify()</code>进行处理之后，都会消失。</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> obj1 <span class="token operator">=</span> <span class="token punctuation">{</span>  <span class="token literal-property property">a</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+              <span class="token literal-property property">b</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                 <span class="token literal-property property">c</span><span class="token operator">:</span> <span class="token number">0</span>
+                 <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> obj2 <span class="token operator">=</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span><span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>obj1<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+obj1<span class="token punctuation">.</span>a <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+obj1<span class="token punctuation">.</span>b<span class="token punctuation">.</span>c <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>obj1<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// {a: 1, b: {c: 1}}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>obj2<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// {a: 0, b: {c: 0}}</span>
+</code></pre></div><h4 id="_2-函数库lodash的-clonedeep方法"><a href="#_2-函数库lodash的-clonedeep方法" class="header-anchor">#</a> （2）函数库lodash的_.cloneDeep方法</h4> <p>该函数库也有提供_.cloneDeep用来做 Deep Copy</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> _ <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'lodash'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> obj1 <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">a</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">b</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">f</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">g</span><span class="token operator">:</span> <span class="token number">1</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">c</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> obj2 <span class="token operator">=</span> _<span class="token punctuation">.</span><span class="token function">cloneDeep</span><span class="token punctuation">(</span>obj1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>obj1<span class="token punctuation">.</span>b<span class="token punctuation">.</span>f <span class="token operator">===</span> obj2<span class="token punctuation">.</span>b<span class="token punctuation">.</span>f<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">// false</span>
+</code></pre></div><h4 id="_3-手写实现深拷贝函数"><a href="#_3-手写实现深拷贝函数" class="header-anchor">#</a> （3）手写实现深拷贝函数</h4> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 深拷贝的实现</span>
+<span class="token keyword">function</span> <span class="token function">deepCopy</span><span class="token punctuation">(</span><span class="token parameter">object</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>object <span class="token operator">||</span> <span class="token keyword">typeof</span> object <span class="token operator">!==</span> <span class="token string">&quot;object&quot;</span><span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">let</span> newObject <span class="token operator">=</span> Array<span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span>object<span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> key <span class="token keyword">in</span> object<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>object<span class="token punctuation">.</span><span class="token function">hasOwnProperty</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      newObject<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span>
+        <span class="token keyword">typeof</span> object<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">===</span> <span class="token string">&quot;object&quot;</span> <span class="token operator">?</span> <span class="token function">deepCopy</span><span class="token punctuation">(</span>object<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">:</span> object<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">return</span> newObject<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="二、数据处理"><a href="#二、数据处理" class="header-anchor">#</a> 二、数据处理</h2> <h3 id="_1-实现日期格式化函数"><a href="#_1-实现日期格式化函数" class="header-anchor">#</a> 1. 实现日期格式化函数</h3> <p>输入：</p> <div class="language- extra-class"><pre class="language-text"><code>dateFormat(new Date('2020-12-01'), 'yyyy/MM/dd') // 2020/12/01
+dateFormat(new Date('2020-04-01'), 'yyyy/MM/dd') // 2020/04/01
+dateFormat(new Date('2020-04-01'), 'yyyy年MM月dd日') // 2020年04月01日
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>const dateFormat = (dateInput, format)=&gt;{
+    var day = dateInput.getDate() 
+    var month = dateInput.getMonth() + 1  
+    var year = dateInput.getFullYear()   
+    format = format.replace(/yyyy/, year)
+    format = format.replace(/MM/,month)
+    format = format.replace(/dd/,day)
+    return format
+}
+</code></pre></div><h3 id="_2-交换a-b的值-不能用临时变量"><a href="#_2-交换a-b的值-不能用临时变量" class="header-anchor">#</a> 2. 交换a,b的值，不能用临时变量</h3> <p>巧妙的利用两个数的和、差：</p> <div class="language- extra-class"><pre class="language-text"><code>a = a + b
+b = a - b
+a = a - b
+</code></pre></div><h3 id="_3-实现数组的乱序输出"><a href="#_3-实现数组的乱序输出" class="header-anchor">#</a> 3. 实现数组的乱序输出</h3> <p>主要的实现思路就是：</p> <ul><li>取出数组的第一个元素，随机产生一个索引值，将该第一个元素和这个索引对应的元素进行交换。</li> <li>第二次取出数据数组第二个元素，随机产生一个除了索引为1的之外的索引值，并将第二个元素与该索引值对应的元素进行交换</li> <li>按照上面的规律执行，直到遍历完成</li></ul> <div class="language- extra-class"><pre class="language-text"><code>var arr = [1,2,3,4,5,6,7,8,9,10];
+for (var i = 0; i &lt; arr.length; i++) {
+  const randomIndex = Math.round(Math.random() * (arr.length - 1 - i)) + i;
+  [arr[i], arr[randomIndex]] = [arr[randomIndex], arr[i]];
+}
+console.log(arr)
+</code></pre></div><p>还有一方法就是倒序遍历：</p> <div class="language- extra-class"><pre class="language-text"><code>var arr = [1,2,3,4,5,6,7,8,9,10];
+let length = arr.length,
+    randomIndex,
+    temp;
+  while (length) {
+    randomIndex = Math.floor(Math.random() * length--);
+    temp = arr[length];
+    arr[length] = arr[randomIndex];
+    arr[randomIndex] = temp;
+  }
+console.log(arr)
+</code></pre></div><h3 id="_4-实现数组元素求和"><a href="#_4-实现数组元素求和" class="header-anchor">#</a> 4. 实现数组元素求和</h3> <ul><li>arr=[1,2,3,4,5,6,7,8,9,10]，求和</li></ul> <div class="language- extra-class"><pre class="language-text"><code>let arr=[1,2,3,4,5,6,7,8,9,10]
+let sum = arr.reduce( (total,i) =&gt; total += i,0);
+console.log(sum);
+</code></pre></div><ul><li>arr=[1,2,3,[[4,5],6],7,8,9]，求和</li></ul> <div class="language- extra-class"><pre class="language-text"><code>var = arr=[1,2,3,[[4,5],6],7,8,9]
+let arr= arr.toString().split(',').reduce( (total,i) =&gt; total += Number(i),0);
+console.log(arr);
+</code></pre></div><p>递归实现：</p> <div class="language- extra-class"><pre class="language-text"><code>let arr = [1, 2, 3, 4, 5, 6] 
+
+function add(arr) {
+    if (arr.length == 1) return arr[0] 
+    return arr[0] + add(arr.slice(1)) 
+}
+console.log(add(arr)) // 21
+</code></pre></div><h3 id="_5-实现数组的扁平化"><a href="#_5-实现数组的扁平化" class="header-anchor">#</a> 5. 实现数组的扁平化</h3> <p><strong>（1）递归实现</strong></p> <p>普通的递归思路很容易理解，就是通过循环递归的方式，一项一项地去遍历，如果每一项还是一个数组，那么就继续往下遍历，利用递归程序的方法，来实现数组的每一项的连接：</p> <div class="language- extra-class"><pre class="language-text"><code>let arr = [1, [2, [3, 4, 5]]];
+function flatten(arr) {
+  let result = [];
+
+  for(let i = 0; i &lt; arr.length; i++) {
+    if(Array.isArray(arr[i])) {
+      result = result.concat(flatten(arr[i]));
+    } else {
+      result.push(arr[i]);
+    }
+  }
+  return result;
+}
+flatten(arr);  //  [1, 2, 3, 4，5]
+</code></pre></div><p><strong>（2）reduce 函数迭代</strong></p> <p>从上面普通的递归函数中可以看出，其实就是对数组的每一项进行处理，那么其实也可以用reduce 来实现数组的拼接，从而简化第一种方法的代码，改造后的代码如下所示：</p> <div class="language- extra-class"><pre class="language-text"><code>let arr = [1, [2, [3, 4]]];
+function flatten(arr) {
+    return arr.reduce(function(prev, next){
+        return prev.concat(Array.isArray(next) ? flatten(next) : next)
+    }, [])
+}
+console.log(flatten(arr));//  [1, 2, 3, 4，5]
+</code></pre></div><p><strong>（3）扩展运算符实现</strong></p> <p>这个方法的实现，采用了扩展运算符和 some 的方法，两者共同使用，达到数组扁平化的目的：</p> <div class="language- extra-class"><pre class="language-text"><code>let arr = [1, [2, [3, 4]]];
+function flatten(arr) {
+    while (arr.some(item =&gt; Array.isArray(item))) {
+        arr = [].concat(...arr);
+    }
+    return arr;
+}
+console.log(flatten(arr)); //  [1, 2, 3, 4，5]
+</code></pre></div><p><strong>（4）split 和 toString</strong></p> <p>可以通过 split 和 toString 两个方法来共同实现数组扁平化，由于数组会默认带一个 toString 的方法，所以可以把数组直接转换成逗号分隔的字符串，然后再用 split 方法把字符串重新转换为数组，如下面的代码所示：</p> <div class="language- extra-class"><pre class="language-text"><code>let arr = [1, [2, [3, 4]]];
+function flatten(arr) {
+    return arr.toString().split(',');
+}
+console.log(flatten(arr)); //  [1, 2, 3, 4，5]
+</code></pre></div><p>通过这两个方法可以将多维数组直接转换成逗号连接的字符串，然后再重新分隔成数组。</p> <p>**（5）**<strong>ES6 中的 flat</strong></p> <p>我们还可以直接调用 ES6 中的 flat 方法来实现数组扁平化。flat 方法的语法：<code>arr.flat([depth])</code></p> <p>其中 depth 是 flat 的参数，depth 是可以传递数组的展开深度（默认不填、数值是 1），即展开一层数组。如果层数不确定，参数可以传进 Infinity，代表不论多少层都要展开：</p> <div class="language- extra-class"><pre class="language-text"><code>let arr = [1, [2, [3, 4]]];
+function flatten(arr) {
+  return arr.flat(Infinity);
+}
+console.log(flatten(arr)); //  [1, 2, 3, 4，5]
+</code></pre></div><p>可以看出，一个嵌套了两层的数组，通过将 flat 方法的参数设置为 Infinity，达到了我们预期的效果。其实同样也可以设置成 2，也能实现这样的效果。在编程过程中，如果数组的嵌套层数不确定，最好直接使用 Infinity，可以达到扁平化。</p> <p><strong>（6）正则和 JSON 方法</strong></p> <p>在第4种方法中已经使用 toString 方法，其中仍然采用了将 JSON.stringify 的方法先转换为字符串，然后通过正则表达式过滤掉字符串中的数组的方括号，最后再利用 JSON.parse 把它转换成数组：</p> <div class="language- extra-class"><pre class="language-text"><code>let arr = [1, [2, [3, [4, 5]]], 6];
+function flatten(arr) {
+  let str = JSON.stringify(arr);
+  str = str.replace(/(\[|\])/g, '');
+  str = '[' + str + ']';
+  return JSON.parse(str); 
+}
+console.log(flatten(arr)); //  [1, 2, 3, 4，5]
+</code></pre></div><h3 id="_6-实现数组去重"><a href="#_6-实现数组去重" class="header-anchor">#</a> 6. 实现数组去重</h3> <p>给定某无序数组，要求去除数组中的重复数字并且返回新的无重复数组。</p> <p>ES6方法（使用数据结构集合）：</p> <div class="language- extra-class"><pre class="language-text"><code>const array = [1, 2, 3, 5, 1, 5, 9, 1, 2, 8];
+
+Array.from(new Set(array)); // [1, 2, 3, 5, 9, 8]
+</code></pre></div><p>ES5方法：使用map存储不重复的数字</p> <div class="language- extra-class"><pre class="language-text"><code>const array = [1, 2, 3, 5, 1, 5, 9, 1, 2, 8];
+
+uniqueArray(array); // [1, 2, 3, 5, 9, 8]
+
+function uniqueArray(array) {
+  let map = {};
+  let res = [];
+  for(var i = 0; i &lt; array.length; i++) {
+    if(!map.hasOwnProperty([array[i]])) {
+      map[array[i]] = 1;
+      res.push(array[i]);
+    }
+  }
+  return res;
+}
+</code></pre></div><h3 id="_7-实现数组的flat方法"><a href="#_7-实现数组的flat方法" class="header-anchor">#</a> 7. 实现数组的flat方法</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">_flat</span><span class="token punctuation">(</span><span class="token parameter">arr<span class="token punctuation">,</span> depth</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>Array<span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span> <span class="token operator">||</span> depth <span class="token operator">&lt;=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> arr<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> arr<span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">prev<span class="token punctuation">,</span> cur</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>Array<span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span>cur<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> prev<span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span><span class="token function">_flat</span><span class="token punctuation">(</span>cur<span class="token punctuation">,</span> depth <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> prev<span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span>cur<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_8-实现数组的push方法"><a href="#_8-实现数组的push方法" class="header-anchor">#</a> 8. 实现数组的push方法</h3> <div class="language- extra-class"><pre class="language-text"><code>let arr = [];
+Array.prototype.push = function() {
+    for( let i = 0 ; i &lt; arguments.length ; i++){
+        this[this.length] = arguments[i] ;
+    }
+    return this.length;
+}
+</code></pre></div><h3 id="_9-实现数组的filter方法"><a href="#_9-实现数组的filter方法" class="header-anchor">#</a> 9. 实现数组的filter方法</h3> <div class="language- extra-class"><pre class="language-text"><code>Array.prototype._filter = function(fn) {
+    if (typeof fn !== &quot;function&quot;) {
+        throw Error('参数必须是一个函数');
+    }
+    const res = [];
+    for (let i = 0, len = this.length; i &lt; len; i++) {
+        fn(this[i]) &amp;&amp; res.push(this[i]);
+    }
+    return res;
+}
+</code></pre></div><h3 id="_10-实现数组的map方法"><a href="#_10-实现数组的map方法" class="header-anchor">#</a> 10. 实现数组的map方法</h3> <div class="language- extra-class"><pre class="language-text"><code>Array.prototype._map = function(fn) {
+   if (typeof fn !== &quot;function&quot;) {
+        throw Error('参数必须是一个函数');
+    }
+    const res = [];
+    for (let i = 0, len = this.length; i &lt; len; i++) {
+        res.push(fn(this[i]));
+    }
+    return res;
+}
+</code></pre></div><h3 id="_11-实现字符串的repeat方法"><a href="#_11-实现字符串的repeat方法" class="header-anchor">#</a> 11. 实现字符串的repeat方法</h3> <p>输入字符串s，以及其重复的次数，输出重复的结果，例如输入abc，2，输出abcabc。</p> <div class="language- extra-class"><pre class="language-text"><code>function repeat(s, n) {
+    return (new Array(n + 1)).join(s);
+}
+</code></pre></div><p>递归：</p> <div class="language- extra-class"><pre class="language-text"><code>function repeat(s, n) {
+    return (n &gt; 0) ? s.concat(repeat(s, --n)) : &quot;&quot;;
+}
+</code></pre></div><h3 id="_12-实现字符串翻转"><a href="#_12-实现字符串翻转" class="header-anchor">#</a> 12. 实现字符串翻转</h3> <p>在字符串的原型链上添加一个方法，实现字符串翻转：</p> <div class="language- extra-class"><pre class="language-text"><code>String.prototype._reverse = function(a){
+    return a.split(&quot;&quot;).reverse().join(&quot;&quot;);
+}
+var obj = new String();
+var res = obj._reverse ('hello');
+console.log(res);    // olleh
+</code></pre></div><p>需要注意的是，必须通过实例化对象之后再去调用定义的方法，不然找不到该方法。</p> <h3 id="_13-将数字每千分位用逗号隔开"><a href="#_13-将数字每千分位用逗号隔开" class="header-anchor">#</a> 13. 将数字每千分位用逗号隔开</h3> <p><strong>数字有小数版本：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>let format = n =&gt; {
+    let num = n.toString() // 转成字符串
+    let decimals = ''
+        // 判断是否有小数
+    num.indexOf('.') &gt; -1 ? decimals = num.split('.')[1] : decimals
+    let len = num.length
+    if (len &lt;= 3) {
+        return num
+    } else {
+        let temp = ''
+        let remainder = len % 3
+        decimals ? temp = '.' + decimals : temp
+        if (remainder &gt; 0) { // 不是3的整数倍
+            return num.slice(0, remainder) + ',' + num.slice(remainder, len).match(/\d{3}/g).join(',') + temp
+        } else { // 是3的整数倍
+            return num.slice(0, len).match(/\d{3}/g).join(',') + temp 
+        }
+    }
+}
+format(12323.33)  // '12,323.33'
+</code></pre></div><p><strong>数字无小数版本：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>let format = n =&gt; {
+    let num = n.toString() 
+    let len = num.length
+    if (len &lt;= 3) {
+        return num
+    } else {
+        let remainder = len % 3
+        if (remainder &gt; 0) { // 不是3的整数倍
+            return num.slice(0, remainder) + ',' + num.slice(remainder, len).match(/\d{3}/g).join(',') 
+        } else { // 是3的整数倍
+            return num.slice(0, len).match(/\d{3}/g).join(',') 
+        }
+    }
+}
+format(1232323)  // '1,232,323'
+</code></pre></div><h3 id="_14-实现非负大整数相加"><a href="#_14-实现非负大整数相加" class="header-anchor">#</a> 14. 实现非负大整数相加</h3> <p>JavaScript对数值有范围的限制，限制如下：</p> <div class="language- extra-class"><pre class="language-text"><code>Number.MAX_VALUE // 1.7976931348623157e+308
+Number.MAX_SAFE_INTEGER // 9007199254740991
+Number.MIN_VALUE // 5e-324
+Number.MIN_SAFE_INTEGER // -9007199254740991
+</code></pre></div><p>如果想要对一个超大的整数(<code>&gt; Number.MAX_SAFE_INTEGER</code>)进行加法运算，但是又想输出一般形式，那么使用 + 是无法达到的，一旦数字超过 <code>Number.MAX_SAFE_INTEGER</code> 数字会被立即转换为科学计数法，并且数字精度相比以前将会有误差。</p> <p>实现一个算法进行大数的相加：</p> <div class="language- extra-class"><pre class="language-text"><code>function sumBigNumber(a, b) {
+  let res = '';
+  let temp = 0;
+  
+  a = a.split('');
+  b = b.split('');
+  
+  while (a.length || b.length || temp) {
+    temp += ~~a.pop() + ~~b.pop();
+    res = (temp % 10) + res;
+    temp  = temp &gt; 9
+  }
+  return res.replace(/^0+/, '');
+}
+</code></pre></div><p>其主要的思路如下：</p> <ul><li>首先用字符串的方式来保存大数，这样数字在数学表示上就不会发生变化</li> <li>初始化res，temp来保存中间的计算结果，并将两个字符串转化为数组，以便进行每一位的加法运算</li> <li>将两个数组的对应的位进行相加，两个数相加的结果可能大于10，所以可能要进位，对10进行取余操作，将结果保存在当前位</li> <li>判断当前位是否大于9，也就是是否会进位，若是则将temp赋值为true，因为在加法运算中，true会自动隐式转化为1，以便于下一次相加</li> <li>重复上述操作，直至计算结束</li></ul> <h3 id="_13-实现-add-1-2-3"><a href="#_13-实现-add-1-2-3" class="header-anchor">#</a> 13. 实现 add(1)(2)(3)</h3> <p>函数柯里化概念： 柯里化（Currying）是把接受多个参数的函数转变为接受一个单一参数的函数，并且返回接受余下的参数且返回结果的新函数的技术。</p> <p>1）粗暴版</p> <div class="language- extra-class"><pre class="language-text"><code>function add (a) {
+return function (b) {
+    return function (c) {
+      return a + b + c;
+    }
+}
+}
+console.log(add(1)(2)(3)); // 6
+</code></pre></div><p>2）柯里化解决方案</p> <ul><li>参数长度固定</li></ul> <div class="language- extra-class"><pre class="language-text"><code>var add = function (m) {
+  var temp = function (n) {
+    return add(m + n);
+  }
+  temp.toString = function () {
+    return m;
+  }
+  return temp;
+};
+console.log(add(3)(4)(5)); // 12
+console.log(add(3)(6)(9)(25)); // 43
+</code></pre></div><p>对于add(3)(4)(5)，其执行过程如下：</p> <ol><li>先执行add(3)，此时m=3，并且返回temp函数；</li> <li>执行temp(4)，这个函数内执行add(m+n)，n是此次传进来的数值4，m值还是上一步中的3，所以add(m+n)=add(3+4)=add(7)，此时m=7，并且返回temp函数</li> <li>执行temp(5)，这个函数内执行add(m+n)，n是此次传进来的数值5，m值还是上一步中的7，所以add(m+n)=add(7+5)=add(12)，此时m=12，并且返回temp函数</li> <li>由于后面没有传入参数，等于返回的temp函数不被执行而是打印，了解JS的朋友都知道对象的toString是修改对象转换字符串的方法，因此代码中temp函数的toString函数return m值，而m值是最后一步执行函数时的值m=12，所以返回值是12。</li></ol> <ul><li>参数长度不固定</li></ul> <div class="language- extra-class"><pre class="language-text"><code>function add (...args) {
+    //求和
+    return args.reduce((a, b) =&gt; a + b)
+}
+function currying (fn) {
+    let args = []
+    return function temp (...newArgs) {
+        if (newArgs.length) {
+            args = [
+                ...args,
+                ...newArgs
+            ]
+            return temp
+        } else {
+            let val = fn.apply(this, args)
+            args = [] //保证再次调用时清空
+            return val
+        }
+    }
+}
+let addCurry = currying(add)
+console.log(addCurry(1)(2)(3)(4, 5)())  //15
+console.log(addCurry(1)(2)(3, 4, 5)())  //15
+console.log(addCurry(1)(2, 3, 4, 5)())  //15
+</code></pre></div><h3 id="_14-实现类数组转化为数组"><a href="#_14-实现类数组转化为数组" class="header-anchor">#</a> 14. 实现类数组转化为数组</h3> <p>类数组转换为数组的方法有这样几种：</p> <ul><li>通过 call 调用数组的 slice 方法来实现转换</li></ul> <div class="language- extra-class"><pre class="language-text"><code>Array.prototype.slice.call(arrayLike);
+</code></pre></div><ul><li>通过 call 调用数组的 splice 方法来实现转换</li></ul> <div class="language- extra-class"><pre class="language-text"><code>Array.prototype.splice.call(arrayLike, 0);
+</code></pre></div><ul><li>通过 apply 调用数组的 concat 方法来实现转换</li></ul> <div class="language- extra-class"><pre class="language-text"><code>Array.prototype.concat.apply([], arrayLike);
+</code></pre></div><ul><li>通过 Array.from 方法来实现转换</li></ul> <div class="language- extra-class"><pre class="language-text"><code>Array.from(arrayLike);
+</code></pre></div><h3 id="_15-使用-reduce-求和"><a href="#_15-使用-reduce-求和" class="header-anchor">#</a> 15. 使用 reduce 求和</h3> <p>arr = [1,2,3,4,5,6,7,8,9,10]，求和</p> <div class="language- extra-class"><pre class="language-text"><code>let arr = [1,2,3,4,5,6,7,8,9,10]
+arr.reduce((prev, cur) =&gt; { return prev + cur }, 0)
+</code></pre></div><p>arr = [1,2,3,[[4,5],6],7,8,9]，求和</p> <div class="language- extra-class"><pre class="language-text"><code>let arr = [1,2,3,4,5,6,7,8,9,10]
+arr.flat(Infinity).reduce((prev, cur) =&gt; { return prev + cur }, 0)
+</code></pre></div><p>arr = [{a:1, b:3}, {a:2, b:3, c:4}, {a:3}]，求和</p> <div class="language- extra-class"><pre class="language-text"><code>let arr = [{a:9, b:3, c:4}, {a:1, b:3}, {a:3}] 
+
+arr.reduce((prev, cur) =&gt; {
+    return prev + cur[&quot;a&quot;];
+}, 0)
+</code></pre></div><h3 id="_16-将js对象转化为树形结构"><a href="#_16-将js对象转化为树形结构" class="header-anchor">#</a> 16. 将js对象转化为树形结构</h3> <div class="language- extra-class"><pre class="language-text"><code>// 转换前：
+source = [{
+            id: 1,
+            pid: 0,
+            name: 'body'
+          }, {
+            id: 2,
+            pid: 1,
+            name: 'title'
+          }, {
+            id: 3,
+            pid: 2,
+            name: 'div'
+          }]
+// 转换为: 
+tree = [{
+          id: 1,
+          pid: 0,
+          name: 'body',
+          children: [{
+            id: 2,
+            pid: 1,
+            name: 'title',
+            children: [{
+              id: 3,
+              pid: 1,
+              name: 'div'
+            }]
+          }
+        }]
+</code></pre></div><p>代码实现：</p> <div class="language- extra-class"><pre class="language-text"><code>function jsonToTree(data) {
+  // 初始化结果数组，并判断输入数据的格式
+  let result = []
+  if(!Array.isArray(data)) {
+    return result
+  }
+  // 使用map，将当前对象的id与当前对象对应存储起来
+  let map = {};
+  data.forEach(item =&gt; {
+    map[item.id] = item;
+  });
+  // 
+  data.forEach(item =&gt; {
+    let parent = map[item.pid];
+    if(parent) {
+      (parent.children || (parent.children = [])).push(item);
+    } else {
+      result.push(item);
+    }
+  });
+  return result;
+}
+</code></pre></div><h3 id="_17-使用es5和es6求函数参数的和"><a href="#_17-使用es5和es6求函数参数的和" class="header-anchor">#</a> 17. 使用ES5和ES6求函数参数的和</h3> <p>ES5：</p> <div class="language- extra-class"><pre class="language-text"><code>function sum() {
+    let sum = 0
+    Array.prototype.forEach.call(arguments, function(item) {
+        sum += item * 1
+    })
+    return sum
+}
+</code></pre></div><p>ES6：</p> <div class="language- extra-class"><pre class="language-text"><code>function sum(...nums) {
+    let sum = 0
+    nums.forEach(function(item) {
+        sum += item * 1
+    })
+    return sum
+}
+</code></pre></div><h3 id="_18-解析-url-params-为对象"><a href="#_18-解析-url-params-为对象" class="header-anchor">#</a> 18. 解析 URL Params 为对象</h3> <div class="language- extra-class"><pre class="language-text"><code>let url = 'http://www.domain.com/?user=anonymous&amp;id=123&amp;id=456&amp;city=%E5%8C%97%E4%BA%AC&amp;enabled';
+parseParam(url)
+/* 结果
+{ user: 'anonymous',
+  id: [ 123, 456 ], // 重复出现的 key 要组装成数组，能被转成数字的就转成数字类型
+  city: '北京', // 中文需解码
+  enabled: true, // 未指定值得 key 约定为 true
+}
+*/
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>function parseParam(url) {
+  const paramsStr = /.+\?(.+)$/.exec(url)[1]; // 将 ? 后面的字符串取出来
+  const paramsArr = paramsStr.split('&amp;'); // 将字符串以 &amp; 分割后存到数组中
+  let paramsObj = {};
+  // 将 params 存到对象中
+  paramsArr.forEach(param =&gt; {
+    if (/=/.test(param)) { // 处理有 value 的参数
+      let [key, val] = param.split('='); // 分割 key 和 value
+      val = decodeURIComponent(val); // 解码
+      val = /^\d+$/.test(val) ? parseFloat(val) : val; // 判断是否转为数字
+      if (paramsObj.hasOwnProperty(key)) { // 如果对象有 key，则添加一个值
+        paramsObj[key] = [].concat(paramsObj[key], val);
+      } else { // 如果对象没有这个 key，创建 key 并设置值
+        paramsObj[key] = val;
+      }
+    } else { // 处理没有 value 的参数
+      paramsObj[param] = true;
+    }
+  })
+  return paramsObj;
+}
+</code></pre></div><h2 id="三、场景应用"><a href="#三、场景应用" class="header-anchor">#</a> 三、场景应用</h2> <h3 id="_1-循环打印红黄绿"><a href="#_1-循环打印红黄绿" class="header-anchor">#</a> 1. 循环打印红黄绿</h3> <p>下面来看一道比较典型的问题，通过这个问题来对比几种异步编程方法：<strong>红灯 3s 亮一次，绿灯 1s 亮一次，黄灯 2s 亮一次；如何让三个灯不断交替重复亮灯？</strong></p> <p>三个亮灯函数：</p> <div class="language- extra-class"><pre class="language-text"><code>function red() {
+    console.log('red');
+}
+function green() {
+    console.log('green');
+}
+function yellow() {
+    console.log('yellow');
+}
+</code></pre></div><p>这道题复杂的地方在于<strong>需要“交替重复”亮灯</strong>，而不是“亮完一次”就结束了。</p> <h4 id="_1-用-callback-实现"><a href="#_1-用-callback-实现" class="header-anchor">#</a> （1）用 callback 实现</h4> <div class="language- extra-class"><pre class="language-text"><code>const task = (timer, light, callback) =&gt; {
+    setTimeout(() =&gt; {
+        if (light === 'red') {
+            red()
+        }
+        else if (light === 'green') {
+            green()
+        }
+        else if (light === 'yellow') {
+            yellow()
+        }
+        callback()
+    }, timer)
+}
+task(3000, 'red', () =&gt; {
+    task(2000, 'green', () =&gt; {
+        task(1000, 'yellow', Function.prototype)
+    })
+})
+</code></pre></div><p>这里存在一个 bug：代码只是完成了一次流程，执行后红黄绿灯分别只亮一次。该如何让它交替重复进行呢？</p> <p>上面提到过递归，可以递归亮灯的一个周期：</p> <div class="language- extra-class"><pre class="language-text"><code>const step = () =&gt; {
+    task(3000, 'red', () =&gt; {
+        task(2000, 'green', () =&gt; {
+            task(1000, 'yellow', step)
+        })
+    })
+}
+step()
+</code></pre></div><p><strong>注意看黄灯亮的回调里又再次调用了 step 方法</strong> 以完成循环亮灯。</p> <h4 id="_2-用-promise-实现"><a href="#_2-用-promise-实现" class="header-anchor">#</a> （2）用 promise 实现</h4> <div class="language- extra-class"><pre class="language-text"><code>const task = (timer, light) =&gt; 
+    new Promise((resolve, reject) =&gt; {
+        setTimeout(() =&gt; {
+            if (light === 'red') {
+                red()
+            }
+            else if (light === 'green') {
+                green()
+            }
+            else if (light === 'yellow') {
+                yellow()
+            }
+            resolve()
+        }, timer)
+    })
+const step = () =&gt; {
+    task(3000, 'red')
+        .then(() =&gt; task(2000, 'green'))
+        .then(() =&gt; task(1000, 'yellow'))
+        .then(step)
+}
+step()
+</code></pre></div><p>这里将回调移除，在一次亮灯结束后，resolve 当前 promise，并依然使用递归进行。</p> <h4 id="_3-用-async-await-实现"><a href="#_3-用-async-await-实现" class="header-anchor">#</a> （3）用 async/await 实现</h4> <div class="language- extra-class"><pre class="language-text"><code>const taskRunner =  async () =&gt; {
+    await task(3000, 'red')
+    await task(2000, 'green')
+    await task(1000, 'yellow')
+    taskRunner()
+}
+taskRunner()
+</code></pre></div><h3 id="_2-实现每隔一秒打印-1-2-3-4"><a href="#_2-实现每隔一秒打印-1-2-3-4" class="header-anchor">#</a> 2. 实现每隔一秒打印 1,2,3,4</h3> <div class="language- extra-class"><pre class="language-text"><code>// 使用闭包实现
+for (var i = 0; i &lt; 5; i++) {
+  (function(i) {
+    setTimeout(function() {
+      console.log(i);
+    }, i * 1000);
+  })(i);
+}
+// 使用 let 块级作用域
+for (let i = 0; i &lt; 5; i++) {
+  setTimeout(function() {
+    console.log(i);
+  }, i * 1000);
+}
+</code></pre></div><h3 id="_3-小孩报数问题"><a href="#_3-小孩报数问题" class="header-anchor">#</a> 3. 小孩报数问题</h3> <p>有30个小孩儿，编号从1-30，围成一圈依此报数，1、2、3 数到 3 的小孩儿退出这个圈， 然后下一个小孩 重新报数 1、2、3，问最后剩下的那个小孩儿的编号是多少?</p> <div class="language- extra-class"><pre class="language-text"><code>function childNum(num, count){
+    let allplayer = [];    
+    for(let i = 0; i &lt; num; i++){
+        allplayer[i] = i + 1;
+    }
+    
+    let exitCount = 0;    // 离开人数
+    let counter = 0;      // 记录报数
+    let curIndex = 0;     // 当前下标
+    
+    while(exitCount &lt; num - 1){
+        if(allplayer[curIndex] !== 0) counter++;    
+        
+        if(counter == count){
+            allplayer[curIndex] = 0;                 
+            counter = 0;
+            exitCount++;  
+        }
+        curIndex++;
+        if(curIndex == num){
+            curIndex = 0               
+        };           
+    }    
+    for(i = 0; i &lt; num; i++){
+        if(allplayer[i] !== 0){
+            return allplayer[i]
+        }      
+    }
+}
+childNum(30, 3)
+</code></pre></div><h3 id="_4-用promise实现图片的异步加载"><a href="#_4-用promise实现图片的异步加载" class="header-anchor">#</a> 4. 用Promise实现图片的异步加载</h3> <div class="language- extra-class"><pre class="language-text"><code>let imageAsync=(url)=&gt;{
+            return new Promise((resolve,reject)=&gt;{
+                let img = new Image();
+                img.src = url;
+                img.οnlοad=()=&gt;{
+                    console.log(`图片请求成功，此处进行通用操作`);
+                    resolve(image);
+                }
+                img.οnerrοr=(err)=&gt;{
+                    console.log(`失败，此处进行失败的通用操作`);
+                    reject(err);
+                }
+            })
+        }
+        
+imageAsync(&quot;url&quot;).then(()=&gt;{
+    console.log(&quot;加载成功&quot;);
+}).catch((error)=&gt;{
+    console.log(&quot;加载失败&quot;);
+})
+</code></pre></div><h3 id="_5-实现发布-订阅模式"><a href="#_5-实现发布-订阅模式" class="header-anchor">#</a> 5. 实现发布-订阅模式</h3> <div class="language- extra-class"><pre class="language-text"><code>class EventCenter{
+  // 1. 定义事件容器，用来装事件数组
+    let handlers = {}
+
+  // 2. 添加事件方法，参数：事件名 事件方法
+  addEventListener(type, handler) {
+    // 创建新数组容器
+    if (!this.handlers[type]) {
+      this.handlers[type] = []
+    }
+    // 存入事件
+    this.handlers[type].push(handler)
+  }
+
+  // 3. 触发事件，参数：事件名 事件参数
+  dispatchEvent(type, params) {
+    // 若没有注册该事件则抛出错误
+    if (!this.handlers[type]) {
+      return new Error('该事件未注册')
+    }
+    // 触发事件
+    this.handlers[type].forEach(handler =&gt; {
+      handler(...params)
+    })
+  }
+
+  // 4. 事件移除，参数：事件名 要删除事件，若无第二个参数则删除该事件的订阅和发布
+  removeEventListener(type, handler) {
+    if (!this.handlers[type]) {
+      return new Error('事件无效')
+    }
+    if (!handler) {
+      // 移除事件
+      delete this.handlers[type]
+    } else {
+      const index = this.handlers[type].findIndex(el =&gt; el === handler)
+      if (index === -1) {
+        return new Error('无该绑定事件')
+      }
+      // 移除事件
+      this.handlers[type].splice(index, 1)
+      if (this.handlers[type].length === 0) {
+        delete this.handlers[type]
+      }
+    }
+  }
+}
+</code></pre></div><h3 id="_6-查找文章中出现频率最高的单词"><a href="#_6-查找文章中出现频率最高的单词" class="header-anchor">#</a> 6. 查找文章中出现频率最高的单词</h3> <div class="language- extra-class"><pre class="language-text"><code>function findMostWord(article) {
+  // 合法性判断
+  if (!article) return;
+  // 参数处理
+  article = article.trim().toLowerCase();
+  let wordList = article.match(/[a-z]+/g),
+    visited = [],
+    maxNum = 0,
+    maxWord = &quot;&quot;;
+  article = &quot; &quot; + wordList.join(&quot;  &quot;) + &quot; &quot;;
+  // 遍历判断单词出现次数
+  wordList.forEach(function(item) {
+    if (visited.indexOf(item) &lt; 0) {
+      // 加入 visited 
+      visited.push(item);
+      let word = new RegExp(&quot; &quot; + item + &quot; &quot;, &quot;g&quot;),
+        num = article.match(word).length;
+      if (num &gt; maxNum) {
+        maxNum = num;
+        maxWord = item;
+      }
+    }
+  });
+  return maxWord + &quot;  &quot; + maxNum;
+}
+</code></pre></div><h3 id="_7-封装异步的fetch-使用async-await方式来使用"><a href="#_7-封装异步的fetch-使用async-await方式来使用" class="header-anchor">#</a> 7. 封装异步的fetch，使用async await方式来使用</h3> <div class="language- extra-class"><pre class="language-text"><code>(async () =&gt; {
+    class HttpRequestUtil {
+        async get(url) {
+            const res = await fetch(url);
+            const data = await res.json();
+            return data;
+        }
+        async post(url, data) {
+            const res = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+            const result = await res.json();
+            return result;
+        }
+        async put(url, data) {
+            const res = await fetch(url, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                data: JSON.stringify(data)
+            });
+            const result = await res.json();
+            return result;
+        }
+        async delete(url, data) {
+            const res = await fetch(url, {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                data: JSON.stringify(data)
+            });
+            const result = await res.json();
+            return result;
+        }
+    }
+    const httpRequestUtil = new HttpRequestUtil();
+    const res = await httpRequestUtil.get('http://golderbrother.cn/');
+    console.log(res);
+})();
+</code></pre></div><h3 id="_8-实现prototype继承"><a href="#_8-实现prototype继承" class="header-anchor">#</a> 8. 实现prototype继承</h3> <p>所谓的原型链继承就是让新实例的原型等于父类的实例：</p> <div class="language- extra-class"><pre class="language-text"><code>//父方法
+function SupperFunction(flag1){
+    this.flag1 = flag1;
+}
+
+//子方法
+function SubFunction(flag2){
+    this.flag2 = flag2;
+}
+
+//父实例
+var superInstance = new SupperFunction(true);
+
+//子继承父
+SubFunction.prototype = superInstance;
+
+//子实例
+var subInstance = new SubFunction(false);
+//子调用自己和父的属性
+subInstance.flag1;   // true
+subInstance.flag2;   // false
+</code></pre></div><h3 id="_9-实现双向数据绑定"><a href="#_9-实现双向数据绑定" class="header-anchor">#</a> 9. 实现双向数据绑定</h3> <div class="language- extra-class"><pre class="language-text"><code>let obj = {}
+let input = document.getElementById('input')
+let span = document.getElementById('span')
+// 数据劫持
+Object.defineProperty(obj, 'text', {
+  configurable: true,
+  enumerable: true,
+  get() {
+    console.log('获取数据了')
+  },
+  set(newVal) {
+    console.log('数据更新了')
+    input.value = newVal
+    span.innerHTML = newVal
+  }
+})
+// 输入监听
+input.addEventListener('keyup', function(e) {
+  obj.text = e.target.value
+})
+</code></pre></div><h3 id="_10-实现简单路由"><a href="#_10-实现简单路由" class="header-anchor">#</a> 10. 实现简单路由</h3> <div class="language- extra-class"><pre class="language-text"><code>// hash路由
+class Route{
+  constructor(){
+    // 路由存储对象
+    this.routes = {}
+    // 当前hash
+    this.currentHash = ''
+    // 绑定this，避免监听时this指向改变
+    this.freshRoute = this.freshRoute.bind(this)
+    // 监听
+    window.addEventListener('load', this.freshRoute, false)
+    window.addEventListener('hashchange', this.freshRoute, false)
+  }
+  // 存储
+  storeRoute (path, cb) {
+    this.routes[path] = cb || function () {}
+  }
+  // 更新
+  freshRoute () {
+    this.currentHash = location.hash.slice(1) || '/'
+    this.routes[this.currentHash]()
+  }
+}
+</code></pre></div><h3 id="_11-实现斐波那契数列"><a href="#_11-实现斐波那契数列" class="header-anchor">#</a> 11. 实现斐波那契数列</h3> <div class="language- extra-class"><pre class="language-text"><code>// 递归
+function fn (n){
+    if(n==0) return 0
+    if(n==1) return 1
+    return fn(n-2)+fn(n-1)
+}
+// 优化
+function fibonacci2(n) {
+    const arr = [1, 1, 2];
+    const arrLen = arr.length;
+
+    if (n &lt;= arrLen) {
+        return arr[n];
+    }
+
+    for (let i = arrLen; i &lt; n; i++) {
+        arr.push(arr[i - 1] + arr[ i - 2]);
+    }
+
+    return arr[arr.length - 1];
+}
+// 非递归
+function fn(n) {
+    let pre1 = 1;
+    let pre2 = 1;
+    let current = 2;
+
+    if (n &lt;= 2) {
+        return current;
+    }
+
+    for (let i = 2; i &lt; n; i++) {
+        pre1 = pre2;
+        pre2 = current;
+        current = pre1 + pre2;
+    }
+
+    return current;
+}
+</code></pre></div><h3 id="_12-字符串出现的不重复最长长度"><a href="#_12-字符串出现的不重复最长长度" class="header-anchor">#</a> 12. 字符串出现的不重复最长长度</h3> <p>用一个滑动窗口装没有重复的字符，枚举字符记录最大值即可。用 map 维护字符的索引，遇到相同的字符，把左边界移动过去即可。挪动的过程中记录最大长度：</p> <div class="language- extra-class"><pre class="language-text"><code>var lengthOfLongestSubstring = function (s) {
+    let map = new Map();
+    let i = -1
+    let res = 0
+    let n = s.length
+    for (let j = 0; j &lt; n; j++) {
+        if (map.has(s[j])) {
+            i = Math.max(i, map.get(s[j]))
+        }
+        res = Math.max(res, j - i)
+        map.set(s[j], j)
+    }
+    return res
+};
+</code></pre></div><h3 id="_13-使用-settimeout-实现-setinterval"><a href="#_13-使用-settimeout-实现-setinterval" class="header-anchor">#</a> 13. 使用 setTimeout 实现 setInterval</h3> <p>setInterval 的作用是每隔一段指定时间执行一个函数，但是这个执行不是真的到了时间立即执行，它真正的作用是每隔一段时间将事件加入事件队列中去，只有当当前的执行栈为空的时候，才能去从事件队列中取出事件执行。所以可能会出现这样的情况，就是当前执行栈执行的时间很长，导致事件队列里边积累多个定时器加入的事件，当执行栈结束的时候，这些事件会依次执行，因此就不能到间隔一段时间执行的效果。</p> <p>针对 setInterval 的这个缺点，我们可以使用 setTimeout 递归调用来模拟 setInterval，这样我们就确保了只有一个事件结束了，我们才会触发下一个定时器事件，这样解决了 setInterval 的问题。</p> <p>实现思路是使用递归函数，不断地去执行 setTimeout 从而达到 setInterval 的效果</p> <div class="language- extra-class"><pre class="language-text"><code>function mySetInterval(fn, timeout) {
+  // 控制器，控制定时器是否继续执行
+  var timer = {
+    flag: true
+  };
+  // 设置递归函数，模拟定时器执行。
+  function interval() {
+    if (timer.flag) {
+      fn();
+      setTimeout(interval, timeout);
+    }
+  }
+  // 启动定时器
+  setTimeout(interval, timeout);
+  // 返回控制器
+  return timer;
+}
+</code></pre></div><h3 id="_14-实现-jsonp"><a href="#_14-实现-jsonp" class="header-anchor">#</a> 14. 实现 jsonp</h3> <div class="language- extra-class"><pre class="language-text"><code>// 动态的加载js文件
+function addScript(src) {
+  const script = document.createElement('script');
+  script.src = src;
+  script.type = &quot;text/javascript&quot;;
+  document.body.appendChild(script);
+}
+addScript(&quot;http://xxx.xxx.com/xxx.js?callback=handleRes&quot;);
+// 设置一个全局的callback函数来接收回调结果
+function handleRes(res) {
+  console.log(res);
+}
+// 接口返回的数据格式
+handleRes({a: 1, b: 2});
+</code></pre></div><h3 id="_15-判断对象是否存在循环引用"><a href="#_15-判断对象是否存在循环引用" class="header-anchor">#</a> 15. 判断对象是否存在循环引用</h3> <p>循环引用对象本来没有什么问题，但是序列化的时候就会发生问题，比如调用<code>JSON.stringify()</code>对该类对象进行序列化，就会报错: <code>Converting circular structure to JSON.</code></p> <p>下面方法可以用来判断一个对象中是否已存在循环引用：</p> <div class="language- extra-class"><pre class="language-text"><code>const isCycleObject = (obj,parent) =&gt; {
+    const parentArr = parent || [obj];
+    for(let i in obj) {
+        if(typeof obj[i] === 'object') {
+            let flag = false;
+            parentArr.forEach((pObj) =&gt; {
+                if(pObj === obj[i]){
+                    flag = true;
+                }
+            })
+            if(flag) return true;
+            flag = isCycleObject(obj[i],[...parentArr,obj[i]]);
+            if(flag) return true;
+        }
+    }
+    return false;
+}
+
+
+const a = 1;
+const b = {a};
+const c = {b};
+const o = {d:{a:3},c}
+o.c.b.aa = a;
+
+console.log(isCycleObject(o)
+</code></pre></div><p>查找有序二维数组的目标值：</p> <div class="language- extra-class"><pre class="language-text"><code>var findNumberIn2DArray = function(matrix, target) {
+    if (matrix == null || matrix.length == 0) {
+        return false;
+    }
+    let row = 0;
+    let column = matrix[0].length - 1;
+    while (row &lt; matrix.length &amp;&amp; column &gt;= 0) {
+        if (matrix[row][column] == target) {
+            return true;
+        } else if (matrix[row][column] &gt; target) {
+            column--;
+        } else {
+            row++;
+        }
+    }
+    return false;
+};
+</code></pre></div><p>二维数组斜向打印：</p> <div class="language- extra-class"><pre class="language-text"><code>function printMatrix(arr){
+  let m = arr.length, n = arr[0].length
+    let res = []
+  
+  // 左上角，从0 到 n - 1 列进行打印
+  for (let k = 0; k &lt; n; k++) {
+    for (let i = 0, j = k; i &lt; m &amp;&amp; j &gt;= 0; i++, j--) {
+      res.push(arr[i][j]);
+    }
+  }
+
+  // 右下角，从1 到 n - 1 行进行打印
+  for (let k = 1; k &lt; m; k++) {
+    for (let i = k, j = n - 1; i &lt; m &amp;&amp; j &gt;= 0; i++, j--) {
+      res.push(arr[i][j]);
+    }
+  }
+  return res
+}
+</code></pre></div></div></div>  <div class="page-edit"><div class="edit-link"><a href="https://github.com/xiumubai/blog/edit/master/docs/02.前端面试攻略/10.offer收割机之手写代码篇.md" target="_blank" rel="noopener noreferrer">编辑</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <!----> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2022/03/30, 12:10:12</span></div></div> <div class="page-nav-wapper"><div class="page-nav-centre-wrap"><a href="/pages/7352d9/" class="page-nav-centre page-nav-centre-prev"><div class="tooltip">9 offer收割机之浏览器原理篇</div></a> <a href="/pages/797d8b/" class="page-nav-centre page-nav-centre-next"><div class="tooltip">11 offer收割机之代码输出篇</div></a></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/pages/7352d9/" class="prev">9 offer收割机之浏览器原理篇</a></span> <span class="next"><a href="/pages/797d8b/">11 offer收割机之代码输出篇</a>→
+      </span></p></div></div></div> <div class="article-list"><div class="article-title"><a href="/archives/" class="iconfont icon-bi">最近更新</a></div> <div class="article-wrapper"><dl><dd>01</dd> <dt><a href="/pages/c852b9/"><div>
+            用slidev写PPT
+            <!----></div></a> <span class="date">04-10</span></dt></dl><dl><dd>02</dd> <dt><a href="/pages/deb61a/"><div>
+            04.用reveal-md写PPT
+            <!----></div></a> <span class="date">04-09</span></dt></dl><dl><dd>03</dd> <dt><a href="/pages/9ee271/"><div>
+            mac使用技巧
+            <!----></div></a> <span class="date">03-30</span></dt></dl> <dl><dd></dd> <dt><a href="/archives/" class="more">更多文章&gt;</a></dt></dl></div></div></main></div> <div class="footer"><div class="icons"><a href="https://github.com/xiumubai" title="GitHub" target="_blank" class="iconfont icon-github"></a><a href="https://juejin.cn/user/430664288573789" title="掘金" target="_blank" class="iconfont icon-juejin"></a><a href="https://www.yuque.com/xiumubai" title="语雀" target="_blank" class="iconfont icon-yuque"></a></div> 
+  Theme by
+  <a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank" title="本站主题">Vdoing</a> 
+    | Copyright © 2021-2022
+    <span>朽木学社版权所有 | <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">京ICP备2022002793号</a></span></div> <div class="buttons"><div title="返回顶部" class="button blur go-to-top iconfont icon-fanhuidingbu" style="display:none;"></div> <div title="去评论" class="button blur go-to-comment iconfont icon-pinglun" style="display:none;"></div> <div title="主题模式" class="button blur theme-mode-but iconfont icon-zhuti"><ul class="select-box" style="display:none;"><li class="iconfont icon-zidong">
+          跟随系统
+        </li><li class="iconfont icon-rijianmoshi">
+          浅色模式
+        </li><li class="iconfont icon-yejianmoshi">
+          深色模式
+        </li><li class="iconfont icon-yuedu">
+          阅读模式
+        </li></ul></div></div> <!----> <!----> <!----></div><div class="global-ui"><div></div></div></div>
+    <script src="/assets/js/app.fb1f9387.js" defer></script><script src="/assets/js/2.3389238a.js" defer></script><script src="/assets/js/144.1acde388.js" defer></script>
+  </body>
+</html>
